@@ -1,0 +1,56 @@
+{% extends 'main_app/index.html' %}
+{% load static %}
+
+{% block cover %}
+    <!-- Section for nav bar and cover image -->
+    <div class="text-box">
+        <h1>Tourism in Saudi Arabia</h1>
+        <p>The fourth tourist destination for the countries of the Organization of Islamic Cooperation.</p>
+        <a href="#read" class="hero-btn">Read More</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!-- Section about tourism in Saudi Arabia -->
+    <section id="about" class="all">
+        <div class="bb">
+            <div class="warpper">
+                <img src="{% static 'img/riyadh.jpg' %}">
+                <div class="text-box2">
+                    <h3>Tourism in Saudi Arabia</h3>
+                    <p>asdfghjkasdfghjkasdfghjklasdfghjkl;asdfghjkl</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for list of cities pages -->
+    <section id="read" class="cities">
+        <h1>Tourist attractions in Saudi Arabia</h1>
+        <p>A list of tourist attractions in some cities in Saudi Arabia</p>
+        <div class="row">
+            <div class="cities-col">
+                <a href="{% url 'main_app:riyadh_city' %}"><img src="{% static 'img/riyadh.jpg' %}">
+                    <div class="layer">
+                        <h3>RIYADH</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="cities-col">
+                <a href="{% url 'main_app:abha_city' %}"><img src="{% static 'img/abha.jpg' %}">
+                    <div class="layer">
+                        <h3>ABHA</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="cities-col">
+                <a href="{% url 'main_app:mekkah_city' %}"><img src="{% static 'img/mekkah.jpg' %}">
+                    <div class="layer">
+                        <h3>MEKKAH</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a href="{% url 'main_app:city_page' %}" class="hero-btn">More Cities</a>
+    </section>
+{% endblock %}

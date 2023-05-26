@@ -1,0 +1,91 @@
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+
+.cities{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    padding-top: 50px;
+}
+.cities a{
+    color: black;
+    border: 1px solid black;
+}
+.cities a:hover{
+    color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.cities-col{
+    position: relative;
+    overflow: hidden;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.cities-col a{
+    text-decoration: none;
+    border: 0;
+}
+.cities-col img{
+    display: block;
+    width: 100%;
+}
+
+.layer{
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background:rgba(21, 172, 21, 0.7);;
+}
+.layer h3{
+    position: absolute;
+    transform: translateX(-50%);
+    color: white;
+    width: 100%;
+    font-weight: 500;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
