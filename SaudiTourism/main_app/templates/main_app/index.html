@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" sizes="192x192" href="{% static 'img/logo.png' %}">
+    <title>{% block title %} Tourism in Saudi Arabia {% endblock %}</title>
+
+    <!-- Import font and icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+
+    <!-- Import CSS sheet -->
+    <link rel="stylesheet" href="{% static 'css/cover_image.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cities_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/paragraph.css' %}">
+    
+    <style>
+    html{
+        scroll-behavior: smooth;
+    }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="{% url 'main_app:home_page' %}"><img src="{% static 'img/logo.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <span class="material-symbols-outlined fa-solid" onclick="hideMenu()">close</span>
+                <ul>
+                    <li><a href="{% url 'main_app:home_page' %}">Home</a></li>
+                    <li><a href="{% url 'main_app:city_page' %}">Cities</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#link">links</a></li>
+                </ul>
+            </div>
+            <span class="material-symbols-outlined fa-solid" onclick="showMenu()">menu</span>
+        </nav>
+        {% block cover %} {% endblock %}
+    </section>
+
+    {% block content %} {% endblock %}
+
+    <!-- Section for footer -->
+    <section id="link" class="footer">
+        <h4>About Us</h4>
+        <p>We publish tourist attractions in Saudi Arabia with reliable sources.</p>
+        <div class="links">
+            <div class="link">
+                <a href="https://www.gcam.gov.sa/" target=”_blank”>General Commission for Audiovisual media</a>
+                <a href="https://www.gea.gov.sa/" target=”_blank”>General Entertainment Authority</a>
+                <a href="https://www.sta.gov.sa/ar/home" target=”_blank”>Saudi Tourism Authority</a>
+            </div>
+            <div class="link">
+                <a href="https://museums.moc.gov.sa/" target=”_blank” target=”_blank”>Museums Commission</a>
+                <a href="https://mt.gov.sa/" target=”_blank”>Ministry of Tourism</a>
+                <a href="https://www.moc.gov.sa/ar" target=”_blank”>Ministry of Culture</a>
+            </div>
+        </div>
+        <p>Made with by <span class="material-symbols-outlined fa">favorite</span> Yousef-Alsaadan</p>
+    </section>
+    
+    <!-- JavaScript for toggle menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

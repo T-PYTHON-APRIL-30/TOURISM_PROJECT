@@ -1,0 +1,104 @@
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.cities{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    padding-top: 50px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.cities-col{
+    position: relative;
+    overflow: hidden;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.cities-col img{
+    display: block;
+    width: 100%;
+}
+
+
+
+
+.all{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.all img{
+    float: left;
+    border-radius: 10px;
+    max-width: 320px;
+    margin-right: 15px;
+
+    display: block;
+    width: 100%;
+}
+
+.bb{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    padding-top: 50px;
+}
+
+.warpper{
+    margin: 150px auto;
+    width: 70%;
+
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.text-box2{
+    color: black;
+    
+    position: relative;
+    overflow: hidden;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.text-box2 h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+
+    
+    font-size: 24px;
+}
+.text-box2 p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
