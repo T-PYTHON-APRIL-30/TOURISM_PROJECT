@@ -1,5 +1,7 @@
 {% extends 'tourism/base.html' %}
 <!--  -->
+{% load embed_video_tags %}
+<!--  -->
 {% load static %}
 <!--  -->
 {% block backgoundImage%}/static/images/img1.jpg {% endblock %}
@@ -14,3 +16,22 @@
   </p>
 </div>
 {% endblock %}
+<!--  -->
+<!-- img1 -->
+{% block img_1%}{% static 'images/img_1.jpg'%}{%endblock%}
+<!-- img2 -->
+{% block img_2%}{% static 'images/img0.jpg'%}{%endblock%}
+<!-- img3 -->
+{% block img_3%}{% static 'images/img1.jpg'%}{%endblock%} {%block video%}
+<h1 class="text-vid">Videos</h1>
+<div class="blockvideo">
+  {% for vid in videos %}
+  <div class="videos-cont">
+    <!--  -->
+    {% video vid.video 'small'%}
+  </div>
+  <!--  -->
+  {%endfor%}
+</div>
+<!--  -->
+{%endblock%}

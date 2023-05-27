@@ -1,5 +1,8 @@
 {% extends 'tourism/base.html' %}
 <!--  -->
+{% load embed_video_tags %}
+
+<!--  -->
 {% load static %}
 <!--  -->
 {% block backgoundImage%}/static/images/riyadh.jpg {% endblock %}
@@ -12,4 +15,24 @@
     city in the Kingdom and one of the fastest-growing cities in the world.
   </p>
 </div>
-{% endblock %} {% block img_1%}{% static 'images/img_1.jpg'%}{%endblock%}
+{% endblock %}
+<!-- img1 -->
+{% block img_1%}{% static 'images/imgr1.jpg'%}{%endblock%}
+<!-- img2 -->
+{% block img_2%}{% static 'images/imgr2.jpg'%}{%endblock%}
+<!-- img3 -->
+{% block img_3%}{% static 'images/imgr3.jpg'%}{%endblock%}
+<!--  -->
+{%block video%}
+<h1 class="text-vid">Videos</h1>
+<div class="blockvideo">
+  {% for vid in videos %}
+  <div class="videos-cont">
+    <!--  -->
+    {% video vid.video 'small'%}
+  </div>
+  <!--  -->
+  {%endfor%}
+</div>
+<!--  -->
+{%endblock%}

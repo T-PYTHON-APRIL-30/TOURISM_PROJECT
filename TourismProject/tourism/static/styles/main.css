@@ -51,17 +51,30 @@ body {
 .logo .title {
   background-color: #333;
   padding: 0 1rem;
-  color: #fff;
+  color: #222;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  font-weight: 500;
 }
 .header .navmenu a {
   position: relative;
   font-size: 1.1em;
-  color: #fff;
+  color: #222;
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
   background-color: #333;
   padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
 }
 .navmenu a::after {
   content: "";
@@ -86,7 +99,7 @@ body {
   left: 25%;
   /* border: 1px solid rebeccapurple; */
   /* height: 40vh; */
-  max-width: 700px;
+  max-width: 800px;
   border-radius: 10px;
 }
 .cont h1 {
@@ -129,11 +142,30 @@ body {
 /* section */
 .section {
   height: 100vh;
-  background-color: #666;
+  background-color: #ccc;
   padding: 5rem;
 }
 .slider {
   max-width: 800px;
   margin: 0 auto;
   height: 100%;
+}
+
+.video {
+  height: 100vh;
+  padding: 5rem;
+}
+
+.text-vid {
+  margin-bottom: 100px;
+  padding-left: 45%;
+}
+
+.videos-cont {
+  flex-wrap: wrap;
+}
+
+.blockvideo {
+  justify-content: space-evenly;
+  display: flex;
 }

@@ -1,17 +1,37 @@
 {% extends 'tourism/base.html' %}
 <!--  -->
+{% load embed_video_tags %}
+<!--  -->
 {% load static %}
 <!--  -->
 {% block backgoundImage %}/static/images/bisha.webp {% endblock %}
 <!--  -->
 {% block content %}
 <div class="cont">
-  <h1>What is Bisha?</h1>
   <p class="text bisha-text">
     Bisha is characterized by its rugged landscape and dramatic mountain
     scenery, which attracts tourists and outdoor enthusiasts. The city is also
-    home to a number of historical and cultural attractions, including ancient
-    ruins, traditional markets, and museums.
+    home to a number of historical and cultural attractions and museums.
   </p>
 </div>
 {% endblock %}
+<!-- img1 -->
+{% block img_1%}{% static 'images/imgb1.jpg'%}{%endblock%}
+<!-- img2 -->
+{% block img_2%}{% static 'images/imgb2.webp'%}{%endblock%}
+<!-- img3 -->
+{% block img_3%}{% static 'images/imgb3.jpg'%}{%endblock%}
+<!--  -->
+{%block video%}
+<h1 class="text-vid">Videos</h1>
+<div class="blockvideo">
+  {% for vid in videos %}
+  <div class="videos-cont">
+    <!--  -->
+    {% video vid.video 'small'%}
+  </div>
+  <!--  -->
+  {%endfor%}
+</div>
+<!--  -->
+{%endblock%}

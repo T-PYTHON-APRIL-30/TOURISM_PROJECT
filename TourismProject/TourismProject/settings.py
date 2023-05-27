@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tourism",
     "bootstrap5",
+    'embed_video',
 ]
 
 MIDDLEWARE = [

@@ -79,7 +79,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active c-item">
               <img
-                src="{% block img_1%}{% static 'images/img0.jpg'%}{%endblock%}"
+                src="{% block img_1%} {%endblock%}"
                 class="d-block w-100 c-img"
                 alt="Slide 1"
                 width="300"
@@ -99,7 +99,7 @@
             </div>
             <div class="carousel-item c-item">
               <img
-                src="{% static 'images/img1.jpg'%}"
+                src="{% block img_2%} {%endblock%}"
                 class="d-block w-100 c-img"
                 alt="Slide 2"
               />
@@ -119,7 +119,7 @@
             </div>
             <div class="carousel-item c-item">
               <img
-                src="{% static 'images/img1.jpg'%}"
+                src="{% block img_3%} {%endblock%}"
                 class="d-block w-100 c-img"
                 alt="Slide 3"
               />
@@ -160,8 +160,8 @@
         {%endblock%}
       </div>
       <!-- <div class="slider">
-        
     </div> -->
     </section>
+    <section class="video">{% block video%} {%endblock%}</section>
   </body>
 </html>
