@@ -1,0 +1,119 @@
+/* {% load static %} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+
+  /* background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('{% block backgoundImage %}./static/images/img0.jpg{% endblock %}'); */
+}
+.wrapper {
+  /* padding: 2rem; */
+  /* background-image: url('/static/images/img0.jpg'); */
+  background-size: contain;
+  background: no-repeat;
+  position: relative;
+}
+.wrapper img {
+  object-fit: cover;
+  z-index: -1;
+  height: 100%;
+}
+
+.content .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2em;
+  color: black;
+  user-select: none;
+}
+.logo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.logo .title {
+  background-color: #333;
+  padding: 0 1rem;
+  color: #fff;
+}
+.header .navmenu a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  background-color: #333;
+  padding: 0.6rem 1rem;
+}
+.navmenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: steelblue;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navmenu a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.cont {
+  position: absolute;
+  top: 13rem;
+  left: 25%;
+  /* border: 1px solid rebeccapurple; */
+  /* height: 40vh; */
+  max-width: 700px;
+  background-color: #333;
+  border-radius: 10px;
+}
+.cont h1 {
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #333;
+  border-radius: 10px;
+}
+.cont p {
+  margin: auto;
+  padding-left: 50px;
+  font-size: 23px;
+  color: blue;
+}
+
+.cont .text {
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 1.3rem;
+}
+
+.cont .riyadh-text {
+  color: brown;
+}
