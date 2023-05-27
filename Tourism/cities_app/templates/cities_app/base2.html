@@ -1,0 +1,96 @@
+{% extends  'cities_app/base1.html' %}
+{% load static %}
+
+{% block title %}{% endblock%}
+{% block head %}
+<style>
+.row{
+    padding-left: 8%;
+    display: flex;
+    height: 88%;
+    font-size: 13px;
+}
+
+.col{
+    flex-basis: 50%;
+}
+.col2{
+    margin-top: 50px;
+}
+
+h1{
+    color: rgb(188, 228, 235);
+    font-size: 100px;
+}
+p {
+    color: rgb(219, 247, 252);
+    font-size: 15px;
+    line-height: 15px;
+}
+.card {
+    width: 170px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 3px 8px rgb(112, 112, 112);
+    transition: transform 0.5s;
+    
+}
+
+.card1{
+    background-image: url({% block bgPlace1%} {%endblock%} );
+}
+.card2{
+    background-image: url({% block bgPlace2%} {%endblock%});
+}
+.card3{
+    background-image: url({% block bgPlace3%} {%endblock%});
+}
+.card4{
+    background-image: url({% block bgPlace4%} {%endblock%});
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    
+}
+h5{
+    color: #b4e6ef;
+    font-size: 12px;
+    text-shadow:  2px 2px 3px #222222;
+}
+
+</style>
+{% endblock %}
+
+{% block bgImage%}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col col2">
+    <h1>{% block catchyPhrase %} {% endblock %}</h1>
+    <p>{%block details%}{% endblock %}</p>
+    </div>
+    <div class="col">
+        <div class="card card1">
+            <h5>{%block place1%} {% endblock %}</h5>
+        </div>
+        <div class="card card2">
+        <h5>{%block place2%} {% endblock %}</h5>
+        </div>
+        <div class="card card3">
+        <h5>{%block place3%} {% endblock %}</h5>
+        </div>
+        <div class="card card4">
+        <h5>{%block place4%} {% endblock %}</h5>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

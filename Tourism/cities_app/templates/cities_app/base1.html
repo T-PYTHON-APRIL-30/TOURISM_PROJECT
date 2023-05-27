@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+        <style>
+            .banner{
+                width: 100%;
+                height: 100vh;
+                background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url("{% block bgImage %} {% endblock %}");
+                background-size: cover;
+                background-position: center;
+            }
+        </style>
+    {% block head %} {% endblock %}
+    </head>
+    <body>
+        <div class="banner">
+            <div class="nav-bar">
+                <a href="{% url 'cities_app:home_page' %}"><img src="/static/images/logo1.png" class="logo"></a>
+                <ul>
+                    <li><a href="{% url 'cities_app:home_page' %}">Home</a></li>
+                    <li><a href="{% url 'cities_app:riyadh_page' %}">Riyadh</a></li>
+                    <li><a href="{% url 'cities_app:mekkah_page' %}">Mekkah</a></li>
+                    <li><a href="{% url 'cities_app:hail_page' %}">Hail</a></li>
+                    <li><a href="{% url 'cities_app:alula_page' %}">AlUla</a></li>
+                </ul>
+            </div>
+            <div class="content">
+            {% block content %} {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
