@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" href="{% static 'styles/main.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            
+            
+        </style>
+    </head>
+    
+    <body>
+        <div class="ss">    
+            <div class="nav_bar">
+                <a href="{% url 'main_app:home' %}">Home</a>
+                <a href="{% url 'main_app:riyadhh' %}">Riyadh</a>
+                <a href="{% url 'main_app:abha' %}">Abha</a>
+                <a href="{% url 'main_app:mekkah' %}">Mekkah</a>
+                <a href="{% url 'main_app:almadinah' %}">Almadinah</a>
+            </div>
+                
+            <div class="welcome">
+                {% block welcome %}
+                
+                {% endblock %}
+            </div>
+            <div>
+                {% block pictures %}
+                
+                {% endblock %}
+            </div>
+            {% block videos %}
+            
+            {% endblock %}
+            <div class="tour">
+                {% block tour %}
+                
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
