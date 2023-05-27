@@ -9,22 +9,19 @@
 body {
   height: 100vh;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 
   /* background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url('{% block backgoundImage %}./static/images/img0.jpg{% endblock %}'); */
 }
 .wrapper {
-  /* padding: 2rem; */
-  /* background-image: url('/static/images/img0.jpg'); */
-  background-size: contain;
-  background: no-repeat;
-  position: relative;
+  height: 100vh;
 }
 .wrapper img {
-  object-fit: cover;
+  /* object-fit: cover; */
   z-index: -1;
   height: 100%;
+  width: 100%;
 }
 
 .content .header {
@@ -90,30 +87,53 @@ body {
   /* border: 1px solid rebeccapurple; */
   /* height: 40vh; */
   max-width: 700px;
-  background-color: #333;
   border-radius: 10px;
 }
 .cont h1 {
-  color: #fff;
+  color: #222;
   padding: 1rem;
   margin-bottom: 1rem;
-  background-color: #333;
   border-radius: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
 }
+
 .cont p {
   margin: auto;
   padding-left: 50px;
   font-size: 23px;
-  color: blue;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
 }
 
 .cont .text {
-  color: black;
+  color: #222;
   font-size: 2rem;
   font-weight: 500;
   padding: 1rem 1.3rem;
 }
+.cont .makkah-text {
+  color: black;
+}
 
-.cont .riyadh-text {
-  color: brown;
+/* section */
+.section {
+  height: 100vh;
+  background-color: #666;
+  padding: 5rem;
+}
+.slider {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100%;
 }
