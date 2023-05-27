@@ -1,0 +1,85 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block title %}Makkah Page{% endblock%}
+{% block content %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{%static 'img/j1.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Let's Discover The Jeddah City Together</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{%static 'img/j2.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock%}
+{% block content0 %}
+{% endblock %}
+{% block subcontent%}
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="pb-3">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="{% static 'img/jeddah4.jpg'%}" alt="">
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">03</h6>
+                                <small class="text-white text-uppercase">Jeddah</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white mb-3" style="padding: 30px;">
+                        <div class="d-flex mb-3">
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Saudi Arabia</a>
+                            <span class="text-primary px-2">|</span>
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Jeddah</a>
+                        </div>
+                        <h2 class="mb-3">The city of Jeddah includes many tourist areas and a group that includes the best tourist attractions in historical, cultural and recreational Jeddah</h2>
+                        <p>They say "Jeddah's different." And its so true,  The Red Sea is still central to it all – for trade, for diving among pristine reefs, and for fishing for Jeddah's legendary seafood. The city where Eve was laid to rest (according to local lore) is a beguiling mix of old and new, and one that remains gloriously different</p>
+                        <p>Historic Al Balad in Jeddah with its charming traditional architecture is currently a UNESCO heritage site. The structures, which are characterized by Roshans (large protruding wooden windows) and lower coral stone houses, are among the rare vestiges of this style of architecture found in the world. The city’s heart is still intact in Al Balad, the magical historical quarter that has undergone a renaissance in recent years. The historic downtown area of Jeddah originally built in the 7th century.</p>
+                        <h4 class="mb-3">THINGS TO DO IN JEDDAH </h4>
+                        <img class="img-fluid w-50 float-left mr-4 mb-2" src="{% static 'img/jeddahn.jpg'%}">
+                        <p>1) explore the historic Al Balad in Jeddah – the magical historical quarter that was originally built in the 7th century. Catch the sunset at Historical Nights Cafe!2 ) visit the Al Tayebat city museum to admire the buildings, all constructed using elements of traditional Hejazi architecture.3) stroll along the beautiful waterfront of Jeddah along the Red Sea – the Jeddah Corniche.4) visit the stunning Al Rahma floating mosque in Jeddah.</p>
+
+                        <h5 class="mb-3">Azulic Resort</h5>
+                        <p>Jeddah is one of the most prominent places of tourism in Saudi Arabia, as it was called the Bride of the Red Sea, as it is not just an ordinary city, but rather a place that has always amazed its visitors with different ways of fun.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                    <img src="{% static 'img/jeddah0.jpg'%}" class="img-fluid mx-auto mb-3" style="width: 100px;">
+                    <h3 class="text-primary mb-3">Jeddah</h3>
+                    <p>Jeddah is a city replete with scenes of architectural and cultural development, as there are skyscrapers with innovative engineering designs, a variety of shopping destinations, and many other tourist places in Jeddah.</p>
+                </div>
+{%endblock%}
+                {% block subcontent0 %}
+                {% endblock%}

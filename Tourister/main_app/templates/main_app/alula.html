@@ -1,0 +1,94 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block title %}Al-Ula Page{% endblock%}
+{% block content %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{%static 'img/a1.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Let's Discover The Al-Ula City Together</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{%static 'img/a2.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock%}
+
+
+{% block content0 %}
+
+{% endblock %}
+
+{% block subcontent%}
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="pb-3">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="{%static 'img/ula1.jpg'%}" alt="">
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">02</h6>
+                                <small class="text-white text-uppercase">Al-Ula</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white mb-3" style="padding: 30px;">
+                        <div class="d-flex mb-3">
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Saudi Arabia</a>
+                            <span class="text-primary px-2">|</span>
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Al-Ula</a>
+                        </div>
+                        <h2 class="mb-3">The city of Al-Ula is considered one of the cities of the Kingdom of Saudi Arabia. There are many archaeological sites that are recommended to be visited, such as: Mada’in Saleh, Elephant Mountain and many other archaeological sites.</h2>
+                        <p>The Royal Commission for Al-Ula Governorate was established to preserve the heritage and heritage of Al-Ula, which is characterized by its unique natural and cultural components. The authority has embarked on implementing a long-term plan to develop the governorate, achieve sustainable transformation, and enhance its position as one of the important archaeological and cultural destinations, and promote it to receive visitors from all over the world. The authority is working on developing and implementing various initiatives to advance the antiquities, tourism, culture, education, arts and environment sectors in the governorate in line with the goals of Vision 2030.</p>
+                        <p>Madain Saleh is an archaeological site located in the Kingdom of Saudi Arabia. The cultural history of Madain Saleh dates back to the period when the Nabataean state flourished in the first centuries BC and the first AD before its fall at the hands of the Roman Empire in 106 AD. Madain Saleh includes 153 carved rock facades in addition to many of Islamic monuments.</p>
+                        <h4 class="mb-3">Ikma Mountain</h4>
+                        <img class="img-fluid w-50 float-left mr-4 mb-2" src="{% static 'img/ikmah.jpeg'%}">
+                        <p>It is a site at the top, a site on the island, as it includes hundreds of archaeological inscriptions and stone carvings that have been preserved for thousands of years along the mountain in different eras and civilizations.
+Most of the site's 300 inscriptions date back to the first half of the first millennium BC; We refer to the existence of values that indicate the presence of signs that indicate the existence of signs that indicate the presence of signs in everyday life.</p>
+                        <h5 class="mb-3">Azulic Resort</h5>
+                        <img class="img-fluid w-50 float-right ml-4 mb-2" src="{%static 'img/azolic.jpg'%}">
+                        <p>The "Azulique" resort is inspired by its designs from the natural and cultural environment in Al-Ula, where the various elements of sustainability are embodied in it in its various aspects, according to what was defined by the "Journey Through Time" plan, which is one of the main goals within the vision of Al-Ula with the aim of making Al-Ula the largest living museum in the world, and a destination A world leader in arts, heritage, culture and nature, in order to achieve the objectives of the Kingdom's Vision 2030.
+The resort will provide a cultural tourism experience and multiple luxury hospitality options, as it includes 76 residential villas with various facilities and accessories, including a health club, international restaurants and cafes, and luxury guesthouses that are integrated according to modern designs consisting of the natural environment and the embodiment of the sand dunes and the colors of the surrounding mountains, in addition to the museum that It includes many creative arts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                    <img src="{% static 'img/ula2.jpg'%}" class="img-fluid mx-auto mb-3" style="width: 100px;">
+                    <h3 class="text-primary mb-3">Al-Ula</h3>
+                    <p>Al-Ula Governorate, located in the northwest of the Kingdom of Saudi Arabia, is characterized by stunning landscapes and a group of prominent archaeological sites. The governorate is currently witnessing development works aimed at strengthening its position as one of the world's leading archaeological, cultural and natural tourism destinations.</p>
+                </div>
+
+                {%endblock%}
+                {% block subcontent0 %}
+                {% endblock%}
+                

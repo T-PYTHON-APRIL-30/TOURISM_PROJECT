@@ -1,0 +1,91 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block title %}Riyadh Page{% endblock%}
+{% block content %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{%static 'img/r2.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Let's Discover The Riyadh City Together</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{%static 'img/r1.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock%}
+
+
+{% block content0 %}
+
+{% endblock %}
+{% block subcontent%}
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="pb-3">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="{% static 'img/riyadh3.jpg'%}" alt="">
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">01</h6>
+                                <small class="text-white text-uppercase">Riyadh</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white mb-3" style="padding: 30px;">
+                        <div class="d-flex mb-3">
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Saudi Arabia</a>
+                            <span class="text-primary px-2">|</span>
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Riyadh</a>
+                        </div>
+                        <h2 class="mb-3">Riyadh is the capital of the Kingdom of Saudi Arabia, and it is the largest tourism city in Saudi Arabia in terms of area and population</h2>
+                        <p>Riyadh is the birthplace of modern Saudi Arabia, where old- world charm meets 21st-century vision. Riyadh translates to “the Gardens,” a reference to the area’s past that dates to the 14th century, when the land was revered for its fertile soil, many canals and trees.
+Today, Riyadh Province, also known as Al Wosta, is home to the country’s capital: a modern metropolis with a thriving financial and business center and a growing cultural scene. Riyadh’s blend of medieval and millennial makes for a beguiling cultural union — one where Arabia’s first roots can be traced, and where its bold future can be envisioned.</p>
+                        <p>The city’s fascinating, centuries- old history can be found within its atmospheric souqs, compelling museums and ancient architecture, but it’s also a modern metropolis, with glittering high-rises and a burgeoning contemporary art scene.</p>
+                        <h4 class="mb-3">THINGS TO DO IN RIYADH</h4>
+                        <img class="img-fluid w-50 float-left mr-4 mb-2" src="{% static 'img/riyadh4.jpg'%}">
+                        <p>1 ) catch the sunrise at Red Dunes in Riyadh. Also go dune bashing & sandboarding here!2 ) enjoy a traditional family style Saudi meal at Najd Village.3 ) visit the historical Diriyah – the birthplace of Saudi! Diriyah was the capital of the Kingdom in the 15th century.4) spend an evening at the Boulevard Riyadh.5) visit Masmak Fort – a clay and mudbrick fort in the old city of Riyadh.6) stroll around the ultra modern King Abdullah Financial District </p>
+
+                        <h5 class="mb-3">Tent amusement park</h5>
+                        <img class="img-fluid w-50 float-right ml-4 mb-2" src="{% static 'img/riyadh5.jpg'%}">
+                        <p>When you visit this city, the tent theme park comes as the best amusement park in Riyadh that cannot be ignored, and you can touch the attractiveness of these amusement parks as soon as you enter it and see the games and facilities that spread throughout it to ensure that your day will be the most beautiful, as it provides various games such as different electric games The levels that everyone can experience and enjoy the sense of adventure, as well as the exciting water games that give you a feeling of freshness that mixes with the feelings of enthusiasm that hang over the garden.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                    <img src="{%static 'img/riyadh2.jpg'%}" class="img-fluid mx-auto mb-3" style="width: 100px;">
+                    <h3 class="text-primary mb-3">Riyadh</h3>
+                    <p>Riyadh is considered one of the most developed and urbanized cities in the Kingdom, as Riyadh is characterized by prosperity and great development.</p>
+                </div>
+                {%endblock%}
+                {% block subcontent0 %}
+                {% endblock%}
+                

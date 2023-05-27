@@ -1,0 +1,88 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block title %}Makkah Page{% endblock%}
+{% block content %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{%static 'img/m1.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Let's Discover The Makkah City Together</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{%static 'img/m2.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                        <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock%}
+{% block content0 %}
+{% endblock %}
+{% block subcontent%}
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="pb-3">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="{%static 'img/makkah0.jpg'%}" alt="">
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">04</h6>
+                                <small class="text-white text-uppercase">Makkah</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white mb-3" style="padding: 30px;">
+                        <div class="d-flex mb-3">
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Saudi Arabia</a>
+                            <span class="text-primary px-2">|</span>
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Makkah</a>
+                        </div>
+                        <h2 class="mb-3">Makkah Al-Mukarramah, the most beloved land to Allah and His Prophet “Mohammed” (PBUH)</h2>
+                        <p>Makkah Al-Mukarramah, which is often referred to as Mecca, it’s a blessed land and the birthplace of our Prophet Muhammad PBUH, and it was on this land that the Quran was first revealed.
+                            Even though Umrah and Hajj pilgrims are familiar with Masjid Al Haram, there are a few other elements inside the masjid that many don’t notice. You can wander around the mosque to admire the Ottoman Porticoes. The arched porches were built during the Ottoman era and have been preserved intricately ever since.</p>
+                        <p>
+You can always visit Masjid Al-Haram regardless of time or date. This is a place where one can escape the shackles of their worldly life and find true peace, contentment, and tranquility.</p>
+                        <h4 class="mb-3">Qapah</h4>
+                        <img class="img-fluid w-50 float-left mr-4 mb-2" src="{%static 'img/qapah.jpg'%}">
+                        <p>The Holy Kaaba is the most beautiful and revered site in Makkah. Known as the ‘House of Allah’, the Holy Kaaba is the main focal point in Islam where Muslims from around the world face towards it to pray 5 times a day. It also houses the Black Stone, also known as the ‘Hajre Aswad’.</p>
+                        <h5 class="mb-3">Clock Tower Museum</h5>
+                        <img class="img-fluid w-50 float-right ml-4 mb-2" src="{%static 'img/Twoer.jpg'%}">
+                        <p>Get a bird’s eye view of Makkah at the Clock Tower Museum
+After exploring Masjid Al-Haram and the holy Kaaba, you can walk towards the Abraj Al-Bait complex to visit the Clock Tower Museum. It’s spread over 4 floors lit with information about the universe, Islam, and its history. The museum is open from 1 PM – 6 PM and tickets start at SAR 150 per person.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                    <img src="{%static 'img/qapah1.jpg'%}" class="img-fluid mx-auto mb-3" style="width: 100px;">
+                    <h3 class="text-primary mb-3">Makkah</h3>
+                    <p>A Saudi city located in the west of the Arabian Peninsula. And in Makkah Al-Mukarramah, the holiest place for Muslims, which is the Kaaba in the Sacred House of God, the kiss of Muslims in their prayers in all parts of the world.</p>
+                </div>
+{%endblock%}
+{% block subcontent0 %}
+{% endblock%}
