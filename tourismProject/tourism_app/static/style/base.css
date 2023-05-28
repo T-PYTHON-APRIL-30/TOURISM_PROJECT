@@ -1,0 +1,302 @@
+@import url(https://fonts.googleapis.com/css?family=Saira+Stencil+One);
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+   
+    
+}
+.header{
+  width: 100%;
+  min-height: 600px;
+  font-family: "Saira Stencil One", cursive;
+
+}
+.header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0px;
+    left: 00px;
+    
+  
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: -1;
+  
+  
+  }
+  .header h2 {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color:rgb(101, 94, 75);
+    padding: 50px;
+    color: #000000;
+    font-size: 200px;
+    text-align:center;
+    justify-self: center;
+    padding-bottom: 20px;
+    height: 100%;
+    mix-blend-mode:screen;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-transform:uppercase;
+    z-index: -1;
+  }
+.image-box{
+    
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    
+    height: 100px;
+    column-gap: 10px;
+    
+}
+.image-box h4{
+    font-size: 27px;
+    color:rgb(255, 246, 235);
+}
+.image-box img{
+    width: 70px;
+    background-color: rgb(255, 246, 235);
+    border-radius: 50%;
+    box-shadow:5px 5px #8c797943;
+
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    bottom: 50px;
+   
+
+
+}
+.city-nav{
+    
+   
+        width: 70%;
+        height: 100px;
+        background-color:rgb(255, 246, 235);
+        border-radius: 9px;
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+        padding: 0px 20px;
+        align-items: center;
+
+}
+.city-nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: darkslategrey;
+    padding: 10px;
+    width: 15%;
+    text-align: center;
+    border-radius: 6px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 800;
+}
+.city-nav a:hover{
+    background-color: rgb(72, 50, 133);
+    color: aliceblue;
+}
+
+.body{
+  
+   
+    width: 100%;
+    background-image: url(hh2.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: honeydew;
+    background-position: center;
+    position: relative;
+     background-attachment: fixed; 
+}
+.content{
+    display: grid;
+	place-items: center
+}
+.body-content{
+    color: darkslategrey;
+    background-color:rgb(255, 246, 235);
+    width: 84%;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+ 
+    display: flex;
+   
+  
+}
+.about-left{
+    margin: 60px;
+    padding: 120x;
+    margin-right: 120px;
+    
+
+}
+.about-left h2{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 900;
+    color: rgb(123, 109, 159);
+    
+
+}
+.carousel{
+  
+    background-color: rgb(255, 233, 209);
+    border-radius: 10px;
+    width: 420px; 
+    float: right; 
+    margin-top: 10%;
+    overflow: hidden;
+   
+}
+.about-right p{
+    color: darkslategrey;
+    height: 130px;
+    padding: 0px 40px;
+    text-align: center;
+}
+.about-right h5{
+    color: #7b6d9f;
+    margin-top: 20px;
+    text-align: center;
+    height: 20px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 900;
+    
+}
+
+.dawn-content{
+    
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+   
+    
+    
+}
+.video-body{
+    width: 84%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color:rgb(255, 246, 235);
+    margin-bottom: 100px;
+   border-radius: 20px;
+  
+}
+.video-body iframe{
+    width: 100%;
+    height: 400px;
+    
+}
+
+
+.mid-body{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+   
+   
+}
+
+.flexs{
+    display: flex;
+}
+.mid-content{
+    width: 84%;
+    height:550px;
+    background-color:rgb(255, 246, 235);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+   
+    
+}
+.mySlides img {
+  
+border-top-right-radius: 20px ;
+border-bottom-right-radius: 20px ;
+height: 30%;
+padding: 8px 8px 8px 0px;
+background-color: rgb(255, 233, 209);
+
+
+}
+/* Hide the images by default */
+.mid-content .mySlides {
+  display: none;
+}
+
+ .row1 {
+padding-bottom: 300px;
+}
+
+/* Six columns side by side */
+.column1 {
+
+  width:200px;
+
+  
+ 
+  margin:0px 0px 50px 120px;
+  background-color: rgb(255, 233, 209);
+  border-top-right-radius: 20px;
+ 
+}
+.column1 img{
+    width: 20%;
+    height: 20%;
+    border-top-right-radius: 20px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    border-top-right-radius:70px ;
+    border-top-left-radius:70px ;
+    padding-left: 50px;
+    padding-top: 20px;
+    background-color: #8c797943;
+    
+}
+.column2{
+    margin-right: 100px;
+}
+.column2 li{
+    
+    padding-bottom: 4px;
+}
+.column2 a{
+    text-decoration: none;
+    color: aliceblue;
+}

@@ -1,0 +1,107 @@
+{% extends 'tourism_app\home.html' %}
+
+{% load static %}
+
+{% block title %} jeddah {% endblock %}
+{% block video %}
+{% static 'videos/jeddah.mp4' %}
+{% endblock %}
+
+{% block videoContent %}
+<h2 style="background-color: rgb(62, 62, 49); ">jeddah <br> city</h2>
+{% endblock videoContent %}
+
+{% block city2 %}style="background-color: rgb(104, 64, 211); color: aliceblue;"{% endblock  %}
+{% block home %}{% endblock home %}
+
+
+
+{% block leftContent %}
+<h2> A seaside city filled with beauty
+</h2>
+<p>When you visit Jeddah, you will have the opportunity to witness a rich heritage celebrated by UNESCO. From “Historical Jeddah” to the antique designs of balconies, stone walkways and ancient sidewalks
+     </p>
+<br>
+<h2>
+When To Visit
+</h2>
+<p>The weather here is clear and settled. Starting from October, the summer heat diminishes into the cool and favorable season up until April, i.e., for 178 days the temperatures will range between 17 and 30 degrees Celsius with light gentle wind perfect for enjoying outdoor activities and adventures.
+
+    Enjoy Jeddah from October to April.
+</p>
+
+{% endblock leftContent %}
+
+
+{% block fristImageContent %}
+<h5>Eventful spaces</h5>
+<p>Entertainment options in Jeddah are endless for everyone. Alongside playing, local and international art exhibitions await to open new doors of perspective to Jeddah’s visitors. 
+</p>
+{% endblock fristImageContent %}
+
+
+{% block fristImage %}
+{% static "images/jeddah3.webp" %}
+{% endblock fristImage %}
+
+{% block SecondImageContent %}
+<h5>Jeddah Yacht Club</h5>
+<p>Regardless of tourists' preferences, their experience in Jeddah Yacht Club is filled with luxury and comfort. Ever since its grand opening, the opportunities to explore the Red Sea became more exciting and the choices are endless. 
+
+</p>
+{% endblock SecondImageContent %}
+
+{% block secondImage %}
+{% static "images/jeddah1.webp" %}
+{% endblock secondImage %}
+
+{% block ThirdImageContent %}
+<h5>Historic Jeddah</h5>
+<p>Although it has been around for hundreds of years, Historic Jeddah is full of contemporary arts. Both modern and old shops line the streets while the mouthwatering aroma of Arabic spices waft across its narrow alleys.</p>
+{% endblock ThirdImageContent %}
+
+{% block ThirdImage %}
+{% static "images/jeddah2.webp" %}
+{% endblock ThirdImage %}
+
+{% block cityname %}
+jeddah
+{% endblock cityname %}
+
+
+
+{% block pic1 %}
+{% static "images/jeddah4.webp" %}
+{% endblock pic1 %}
+
+{% block pic1a %}
+{% static "images/jeddah4.webp" %}
+{% endblock pic1a %}
+
+
+{% block pic2 %}
+{% static "images/jeddah5.webp" %}
+{% endblock pic2 %}
+
+{% block pic2a %}
+{% static "images/jeddah5.webp" %}
+{% endblock pic2a %}
+
+
+{% block pic3 %}
+{% static "images/jeddah6.webp" %}
+{% endblock pic3 %}
+
+
+{% block pic3a %}
+{% static "images/jeddah6.webp" %}
+{% endblock pic3a %}
+
+
+
+{% block map %}{% static "images/sa_jeddah.svg" %}{% endblock %}
+
+
+{% block Youtube %}
+<iframe width="661" height="372" src="https://www.youtube.com/embed/C5V63clIqBA" title="jeddah skyline, Saudi Arabia 🇸🇦 by drone in [4k](ابراج الرياض)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% endblock Youtube %}

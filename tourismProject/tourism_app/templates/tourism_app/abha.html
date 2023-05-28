@@ -1,0 +1,103 @@
+{% extends 'tourism_app\home.html' %}
+
+{% load static %}
+
+{% block title %} abha {% endblock %}
+{% block video %}
+{% static 'videos/abha.mp4' %}
+{% endblock %}
+
+{% block videoContent %}
+<h2 style="background-color: rgb(75, 101, 82);" >abha <br> city</h2>
+{% endblock videoContent %}
+
+{% block city1 %}style="background-color: rgb(104, 64, 211); color: aliceblue;"{% endblock  %}
+{% block home %}{% endblock home %}
+
+
+
+{% block leftContent %}
+<h2>
+    Start discovering Abha with all your senses
+</h2>
+<p>At an altitude of 2,200 m between the peaks of the Sarawat Mountains, Abha, is ideally located in southwestern region of Saudi Arabia. Its exceptional location
+     allows you to embrace the clouds and wonder around its mountaintops. While consumed with astonishment and amusement, you will feel like time traveling hundreds of years back in time as you stumble upon castles 
+     and palaces built from the elements taken from their unspoiled environment.
+    </p>
+<br>
+<h2>
+When To Visit
+</h2>
+<p>The weather is always pleasant in Abha. Throughout the seasons, and all year long, the weather is moderate accompanied by pleasant breezes and light fog. The highest temperature in summer reaches 15 degrees Celsius, and falls lower in the higher areas and past midnight. On the other hand, winter here is best known for gathering around a campfire</p>
+
+{% endblock leftContent %}
+
+
+{% block fristImageContent %}
+<h5>Fatimah’s Museum</h5>
+<p>You can take a tour around the museum to observe the culture of local women whose relation to the mountains and arts never broke</p>
+{% endblock fristImageContent %}
+
+
+{% block fristImage %}
+{% static "images/abha3.webp" %}
+{% endblock fristImage %}
+
+{% block SecondImageContent %}
+<h5>The High City</h5>
+<p>if you want a local experience in the heart of Abha, head to the High City. Enjoy a cup of tea prepared on embers or indulge in the countless local and international dishes in wonderful,</p>
+{% endblock SecondImageContent %}
+
+{% block secondImage %}
+{% static "images/abha2.webp" %}
+{% endblock secondImage %}
+
+{% block ThirdImageContent %}
+<h5> Al-Dabab Walkway</h5>
+<p>art of the marvel of the trip to Abha, which is full of breath-taking natural sights, is seeing its fog that penetrates its mountains and touches its land in Al-Dabab Walkway, which spans over 7 km</p>
+{% endblock ThirdImageContent %}
+
+{% block ThirdImage %}
+{% static "images/abha1.webp" %}
+{% endblock ThirdImage %}
+
+{% block cityname %}
+abha
+{% endblock cityname %}
+
+
+
+{% block pic1 %}
+{% static "images/abha4.webp" %}
+{% endblock pic1 %}
+
+{% block pic1a %}
+{% static "images/abha4.webp" %}
+{% endblock pic1a %}
+
+
+{% block pic2 %}
+{% static "images/abha5.webp" %}
+{% endblock pic2 %}
+
+{% block pic2a %}
+{% static "images/abha5.webp" %}
+{% endblock pic2a %}
+
+
+{% block pic3 %}
+{% static "images/abha6.webp" %}
+{% endblock pic3 %}
+
+
+{% block pic3a %}
+{% static "images/abha6.webp" %}
+{% endblock pic3a %}
+
+
+
+
+{% block map %}{% static "images/sa_abha.svg" %}{% endblock %}
+{% block Youtube %}
+<iframe width="661" height="372" src="https://www.youtube.com/embed/m_B7tqImv9g" title="مدينه ابها بالسعودية - 4K Abha city, Saudi Arabia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% endblock Youtube %}
