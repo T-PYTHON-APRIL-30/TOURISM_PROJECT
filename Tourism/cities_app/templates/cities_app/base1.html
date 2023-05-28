@@ -3,12 +3,16 @@
 <html>
     <head>
         <title>{% block title %} {% endblock %}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
         <style>
+        
             .banner{
                 width: 100%;
                 height: 100vh;
-                background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url("{% block bgImage %} {% endblock %}");
+                background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url("{% block bgImage %} {% endblock %}");
                 background-size: cover;
                 background-position: center;
             }
