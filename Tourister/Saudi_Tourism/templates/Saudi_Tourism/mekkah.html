@@ -1,0 +1,69 @@
+{% extends 'Saudi_Tourism/home_page.html'%}
+{% load static %}
+
+
+{% block title %}  Mekkah {% endblock %}
+
+{% block content %} <div class="mekkah_image">
+
+    <div class="covermsg">
+        <p class="wellcome_abha"> Mekkah </p>
+    </div>
+
+    <div class="covermsg">
+        <p class="wellcome_abha">In the past, it was called Bakkah, Umm Al-Qura, and Al-Balad Al-Amin, and its mountains witnessed the first revelation. </p>
+    </div>
+
+    <div class="about">
+        <p> Here some of leading destinations in Mekkah city </p>
+    </div>
+
+    <div class="photo_show">
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/mekkah1.jpg'%}" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="description">Grand Mosque in Makkah</h5>
+                      <p class="description">Since the dawn of civilization, the Kaaba of the Grand Mosque has had great religious significance, owing to its religious connotations associated with the Creator.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'images/mekkah2.jpg'%}" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="description">Hira Cultural District Tour</h5>
+                      <p class="description">THira Cultural District, located next to the famous landmark of Makkah, Jabal Al-Nour, provides a uniquely enriching experience, in a cultural, historical and entertaining journey to the worlds of the past, to remain alive in memory.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'images/mekkah3.jpg'%}" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="description">The Kiswa Factory of the Holy Kaaba</h5>
+                      <p class="description">New black, pure-silk clothing for Kaaba, called kiswa, is made by the Kiswa Factory of the Holy Kaaba (King Abdulaziz Complex) every year.</p>
+                    </div>
+                  </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        
+
+    </div>
+    
+
+    {% endblock %}
