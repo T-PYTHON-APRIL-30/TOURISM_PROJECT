@@ -1,0 +1,68 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %}Tourister - Tourism in Saudi Arabia{% endblock %}
+
+{% block content %}
+<h1>Popular destinations in Saudi Arabia</h1>
+<div class="main-carousel">
+  <div class="cell">
+    <div class="card">
+        <img src="{% static 'images/img8.jpg' %}" class="card-img-top" alt="Saudi Tourism">
+        <div class="card-body">
+            <h5 class="card-title">Tourism in saudi arabia</h5>
+            <p class="card-text">Experience the enchanting beauty of Saudi Arabia. From mesmerizing landscapes to rich cultural heritage, Saudi Arabia offers a diverse range of attractions for every traveler. Explore ancient historical sites, immerse yourself in vibrant markets, and indulge in traditional Arabian hospitality.</p>
+        </div>
+
+    </div>
+  </div>
+  <div class="cell">
+    <div class="card">
+        <img src="{% static 'images/Riyadh.jpg' %}" class="card-img-top" alt="Saudi Tourism">
+        <div class="card-body">
+            <h5 class="card-title">Riyadh</h5>
+            <p class="card-text">There are several reasons why people visit Riyadh and some of the famous places to explore in the city include:
+Historical and Cultural Sites: Riyadh is home to historical and cultural landmarks that offer insights into Saudi Arabia's rich heritage. Some notable sites include Masmak Fortress, a symbol of the city's history, and the UNESCO-listed Diriyah Historical District, </p>
+            <a href="{% url 'tourism_app:riyadh' %} " style="color:blue;text-decoration: underline;">Show more</a>
+        </div>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="card">
+        <img src="{% static 'images/img7.jpg' %}" class="card-img-top" alt="Saudi Tourism">
+        <div class="card-body">
+            <h5 class="card-title">Makkah</h5>
+            <p class="card-text">Islamic Pilgrimage: Saudi Arabia holds great significance for Muslims around the world as the birthplace of Islam. The holy cities of Mecca and Medina attract millions of pilgrims every year who come to perform Hajj or Umrah, the major Islamic pilgrimages. Visitors can witness the awe-inspiring Grand Mosque, the Kaaba, and other sacred sites.</p>
+            <a href="{% url 'tourism_app:makkah' %}" style="color:blue;text-decoration: underline;">Show more</a>
+        </div>
+    </div>
+  </div>
+    <div class="card">
+        <img src="{% static 'images/Abha.jpg' %}" class="card-img-top" alt="Saudi Tourism">
+        <div class="card-body">
+            <h5 class="card-title">Abha</h5>
+            <p class="card-text">Abha is a city located in the southwestern region of Saudi Arabia, specifically in the Asir Province. It is known for its pleasant climate, beautiful landscapes, and cultural heritage. Here are some highlights about Abha.</p>
+            <a href="{% url 'tourism_app:abha' %}" style="color:blue;text-decoration: underline;">Show more</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/alula.jpg' %}" class="card-img-top" alt="Saudi Tourism">
+        <div class="card-body">
+            <h5 class="card-title">Alula</h5>
+            <p class="card-text">Islamic Pilgrimage: Saudi Arabia holds great significance for Muslims around the world as the birthplace of Islam. The holy cities of Mecca and Medina attract millions of pilgrims every year who come to perform Hajj or Umrah, the major Islamic pilgrimages. Visitors can witness the awe-inspiring Grand Mosque, the Kaaba, and other sacred sites.</p>
+            <a href="{% url 'tourism_app:alula' %}" style="color:blue;text-decoration: underline;">Show more</a>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript">
+  $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  pauseAutoPlayOnHover: false
+
+});
+</script>
+
+{% endblock %}
+

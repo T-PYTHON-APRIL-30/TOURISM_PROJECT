@@ -1,0 +1,33 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %}Tourister - Tourism in Saudi Arabia{% endblock %}
+
+{% block content %}
+<div class="makkah">
+  <h1 style="margin:5px;">Makkah</h1>
+  <h3 style="margin:5px;">Some of the famous places to visit in Makkah are:</h3>
+  <ul>
+    <li>Masjid al-Haram: The Grand Mosque, known as Masjid al-Haram, is the holiest site in Islam.</li>
+    <li>Zamzam Well: Situated near the Kaaba, the Zamzam Well is a source of blessed water. </li>
+    <li>Jabal al-Nour: Jabal al-Nour, meaning the "Mountain of Light," is a prominent mountain in Makkah.</li>
+    <li>Abraj Al-Bait Clock Tower: This iconic skyscraper complex stands adjacent to Masjid al-Haram.</li>
+  </ul>
+</div>
+<div class="main-carousel">
+ <iframe width="942" height="530" src="https://www.youtube.com/embed/tGUBqyZxIUU" title="تصوير جوي لـ المسجد الحرام ومكة المكرمة" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="cell"><img src="{%static '/images/makkah/makkah1.jpg'%}"/></div>
+  <div class="cell"><img src="{%static '/images/makkah/makkah2.jpg'%}"/></div>
+  <div class="cell"><img src="{%static '/images/makkah/makkah3.jpg'%}"/></div>
+    <div class="cell"><img src="{%static '/images/makkah/makkah4.jpg'%}"/></div>
+</div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript">
+  $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  wrapAround:true,
+  freeScroll: true
+});
+</script>
+
+{% endblock %}

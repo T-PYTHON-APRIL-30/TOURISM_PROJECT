@@ -1,0 +1,33 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %}Tourister - Tourism in Saudi Arabia{% endblock %}
+
+{% block content %}
+<div class="alula">
+  <h1 style="margin:5px;">Alula</h1>
+  <h3 style="margin:5px;">Some of the famous places to visit in alula are:</h3>
+  <ul>
+    <li>Madain Saleh (Al-Hijr): Also known as Al-Hijr, Madain Saleh is a UNESCO World Heritage Site and one of the most important archaeological sites in Saudi Arabia.</li>
+    <li>AlUla Old Town: Explore the historic AlUla Old Town, which showcases traditional mud-brick buildings and narrow alleyways. </li>
+    <li>Elephant Rock: As its name suggests, Elephant Rock is a unique rock formation resembling an elephant.</li>
+    <li>AlUla Museum: The AlUla Museum offers insights into the history, archaeology, and heritage of the region.</li>
+  </ul>
+</div>
+<div class="main-carousel">
+    <iframe width="942" height="530" src="https://www.youtube.com/embed/LMLT64Pgdag" title="تصوير جوي #العلا #alula" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="cell"><img src="{%static '/images/alula/alula1.jpeg'%}"/></div>
+    <div class="cell"><img src="{%static '/images/alula/alula2.jpg'%}"/></div>
+    <div class="cell"><img src="{%static '/images/alula/alula3.jpeg'%}"/></div>
+    <div class="cell"><img src="{%static '/images/alula/alula4.jpg'%}"/></div>
+</div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript">
+  $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  wrapAround:true,
+  freeScroll: true
+});
+</script>
+
+{% endblock %}

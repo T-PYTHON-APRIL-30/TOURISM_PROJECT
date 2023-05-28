@@ -1,0 +1,33 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %}Tourister - Tourism in Saudi Arabia{% endblock %}
+
+{% block content %}
+<div class="abha">
+  <h1 style="margin:5px;">abha</h1>
+  <h3 style="margin:5px;">Some of the famous places to visit in abha are:</h3>
+  <ul>
+    <li>Habala Village: Habala is a traditional mountain village famous for its unique architecture and vibrant cultural heritage.</li>
+    <li>Asir National Park: Located in the mountains of Asir, Asir National Park is a stunning natural reserve known for its diverse flora and fauna.</li>
+    <li>Abha Palace Theme Park: Abha Palace Theme Park is a popular family-friendly attraction in Abha. It features various rides,</li>
+    <li>Al-Soudah Park: Al-Soudah Park is a beautiful park located in the Asir Mountains. It offers stunning panoramic views, </li>
+  </ul>
+</div>
+<div class="main-carousel">
+    <iframe width="942" height="530" src="https://www.youtube.com/embed/mmsRRqC0XhE" title="Abha Aerial Shooting | تصوير جوي لمدينة أبها" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="cell"><img src="{%static '/images/abha/abha.jpg'%}"/></div>
+    <div class="cell"><img src="{%static '/images/abha/abh2.jpg'%}"/></div>
+    <div class="cell"><img src="{%static '/images/abha/abha1.jpg'%}"/></div>
+    <div class="cell"><img src="{%static '/images/abha/abha4.jpg'%}"/></div>
+</div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript">
+  $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  wrapAround:true,
+  freeScroll: true
+});
+</script>
+
+{% endblock %}

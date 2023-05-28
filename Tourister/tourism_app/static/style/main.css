@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+body {
+    display:flex;
+    justify-content:center;
+    opacity:1;
+}
+
+header {
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://lot.dhl.com/wp-content/uploads/2019/05/Article-Key-Image-Vision-2030.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  min-height: 100vh;
+  padding: 18px 35px;
+  background-color: #ffffff;
+
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  margin-right:110px;
+}
+
+.logo {
+  height: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  column-gap: 25px;
+  background-color: #484d57;
+  border-radius: 40px;
+  padding: 25px 45px;
+}
+
+.nav-bar a:link,
+.nav-bar a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+
+.btn {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.mars-bar {
+  position: bottom;
+  bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  padding: 10px 40px;
+  border-radius: 50px;
+  box-shadow: 0px 20px 15px rgb(100, 100, 100);
+  min-width: 60%;
+  justify-self: center;
+  align-self: center;
+  font-size: 0.75rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon {
+  background-color: rgba(100, 90, 255, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.right-nav {
+  display: flex;
+  column-gap: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  padding: 0 8px;
+  text-align: center;
+  width:80%;
+  font-text: bold;
+  border-radius: 25px;
+  border: 25px;
+}
+
+.card-img-top {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-radius: 25px;
+  margin:30px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  margin: 1px 15px;
+  padding: 7px;
+  overflow: hidden;
+  border-radius: 30px;
+  width:100%;
+}
+
+.cell img {
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  object-fit: cover;
+}
+.card-text{
+
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin-top:10px;
+    color:#2e3f51;
+    font:bold;
+}
+
+.card-title{
+    size-text:18px;
+
+}
+
+.content{
+    width:900px;
+    height:1000px;
+}

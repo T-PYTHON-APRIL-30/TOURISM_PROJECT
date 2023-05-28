@@ -1,0 +1,35 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %}Tourister - Tourism in Saudi Arabia{% endblock %}
+
+{% block content %}
+<div class="riyadh">
+  <h1>Riyadh</h1>
+  <h3>Some of the famous places to visit in Riyadh are:
+
+  </h3>
+  <ul>
+    <li>Kingdom Centre Tower: A modern skyscraper that offers panoramic views of the city</li>
+    <li>Diriyah Historical District: A UNESCO World Heritage site known for its mud-brick structures and historical significance.</li>
+    <li>Masmak Fortress: A historical fort that played a significant role in the kingdom's unification.</li>
+    <li>National Museum of Saudi Arabia: A museum that showcases the rich history and culture of Saudi Arabia.</li>
+    <li>Riyadh Zoo: A popular attraction with a variety of animals and recreational areas.</li>
+  </ul>
+</div>
+<div class="main-carousel">
+  <iframe width="942" height="530" src="https://www.youtube.com/embed/z3i6IbBTq8U" title="تصوير جوي - الرياض - جولة جوية -  العاصمة الرياض" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="cell"><img src="{%static '/images/riyadh/riy1.jpg'%}"/></div>
+  <div class="cell"><img src="{%static '/images/riyadh/riy2.jpg'%}"/></div>
+  <div class="cell"><img src="{%static '/images/riyadh/riy3.jpg'%}"/></div>
+</div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript">
+  $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  wrapAround:true,
+  freeScroll: true
+});
+</script>
+
+{% endblock %}

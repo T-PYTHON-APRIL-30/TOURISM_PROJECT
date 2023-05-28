@@ -1,0 +1,24 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %}Tourister - Tourism in Saudi Arabia{% endblock %}
+
+{% block content %}
+<div class="parg">
+  <h1>Riyadh</h1>
+</div>
+<div class="main-carousel">
+  <div class="cell"><img src="{%static '/images/img1.jpeg'%}"/></div>
+  <div class="cell"><img src="{%static '/images/img2.jpeg'%}"/></div>
+  <div class="cell"><img src="{%static '/images/img3.jpeg'%}"/></div>
+</div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript">
+  $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  wrapAround:true,
+  freeScroll: true
+});
+</script>
+
+{% endblock %}
