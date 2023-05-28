@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Website</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Robot', sans-serif;
+            }
+            .container{
+                width: 100%;
+                height: 100%;
+                background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://zamzam.com/blog/wp-content/uploads/2021/07/shamsan-castle.jpg");
+                background-position: center;
+                background-size: cover;
+                padding-left: 8%;
+                padding-right: 8%;
+                box-sizing: border-box;
+            }
+            .navbar{
+                height: 12%;
+                display:flex;
+                align-items: center;
+            }
+            
+            .menu-icon{
+                width: 30px;
+                cursor: pointer;
+            }
+            nav{
+                flex: 1;
+                text-align: right;
+            }
+            nav ul li{
+                list-style: none;
+                display: inline-block;
+                margin-left: 60px;
+            }
+            nav ul li a{
+                text-decoration: none;
+                color: blue;
+                font-size: 13px;
+            }
+            .row{
+                display: flex;
+                height: 88%;
+                align-items: center;
+            }
+            .col{
+                flex-basis: 50%;
+            }
+            h1{
+                color:aliceblue;
+                font-size: 100px;
+            }
+            p{
+                color: white;
+                font-size: 11px;
+                line-height: 15px;
+            }
+            button{
+                width: 180px;
+                color: wheat;
+                font-size: 12px;
+                padding: 12px 0;
+                background: black;
+                border: 0;
+                border-radius: 20px;
+                outline: none;
+                margin-top: 30px;
+            }
+            .card{
+
+                width: 200px;
+                height: 230px;
+                display: inline-block;
+                border-radius: 10px;
+                padding: 12px;
+                box-sizing: border-box;
+                cursor: pointer;
+                margin: 10px 15px;
+                background-image:url("");
+                background-position: center;
+                background-size: cover;
+            }
+            .card1{
+                background-image: url("https://zamzam.com/blog/wp-content/uploads/2021/07/green-mountain.jpg");      
+                  }
+            .card2{
+                background-image:url("https://zamzam.com/blog/wp-content/uploads/2021/07/national-park-asir.jpg") ;
+            }
+            .card3{
+                background-image:url("https://zamzam.com/blog/wp-content/uploads/2021/07/jorry-cafe.jpg") ;
+            }
+            .card4{
+                background-image:url('https://zamzam-blog.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/01/mahara-karting.jpg') ;
+            }
+            h5{
+                color: white;
+                text-shadow: 0 0 0;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src= "" class="logo">
+                <nav>
+                </nav>
+                <span class="material-symbols-outlined">Home</span>
+                    <a href="" >Home</a>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h1>Exploring Abha</h1>
+                    <p>The capital of Asir Province, Abha is situated in the Aseer mountain region, Saudi Arabia at an elevation of 2200 m. The city is situated at the southern end of the Red Sea and is popular for panoramic views, rocky mountains, mud-walled Shada Palace, lakes and theme parks</p>
+                    <button type="button"> Explore</button>
+                </div>
+                <div class="col">
+                    <div class="card card1">
+                        <h5> Jabal Thera – Or the Green Mountain</h5>
+                    </div>
+                    <div class="card card2">
+                        <h5> Aseer National Park – An exciting family attraction</h5>
+                    </div>
+                    <div class="card card3">
+                        <h5> Abu Kheyal Park – For breathtaking views</h5>
+                    </div>
+                    <div class="card card4">
+                        <h5> Shamsan Fort – A remain of the Ottoman history</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
