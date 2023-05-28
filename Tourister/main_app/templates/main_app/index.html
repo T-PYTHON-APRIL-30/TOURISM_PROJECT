@@ -16,8 +16,9 @@
         <title>{% block title %} Tourism in Saudi Arabia {% endblock %}</title>
 
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'css/city.css' %}">
         <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/paragraph.css' %}">
+        <link rel="stylesheet" href="{% static 'css/city.css' %}">
 
         <style>
             html{
@@ -29,7 +30,9 @@
         <div class="main">
             {% block video %} {% endblock %}
             <nav>
-                <img src="{% static 'img/logo.png' %}" alt="logo" class="logo">
+                <a href="{% url 'main_app:home_page' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="logo" class="logo">
+                </a>
                 <ul>
                     <li><a href="{% url 'main_app:home_page' %}">HOME</a></li>
                     <li><a href="{% url 'main_app:home_page' %}#city">CITIES</a></li>
