@@ -1,0 +1,21 @@
+{% extends 'main_app/index.html' %}
+{% load static %}
+
+{% block title %} Tourism in Riyadh city {% endblock %}
+
+{% block video %}
+    <video autoplay loop muted plays-inline src="{% static 'video/riyadh.mp4' %}" class="video"></video>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1 class="left">Riyadh <br> city</h1>
+        <p class="left">The fourth tourist destination for the countries of the Organization of Islamic Cooperation.</p>
+        <div class="links left">
+            <a href="{% url 'main_app:home_page' %}#city" class="free-img">Cities</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content2 %}
+{% endblock %}
