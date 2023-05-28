@@ -21,3 +21,11 @@ def mekkah(request:HttpRequest):
 def almadinah(request:HttpRequest):
 
     return render(request, "main_app/almadinah.html")
+
+def about(request:HttpRequest):
+
+    return render(request, "main_app/about.html")
+
+def contact(request:HttpRequest):
+
+    return render(request, "main_app/contact.html")

@@ -9,19 +9,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
-            
-            
+
         </style>
     </head>
     
-    <body>
-        <div class="ss">    
+    <body class="main_div" style="{% block dibbg %} background-image: url('static/images/background_1.jpg'); {% endblock %}">
+        <div >    
             <div class="nav_bar">
                 <a href="{% url 'main_app:home' %}">Home</a>
                 <a href="{% url 'main_app:riyadhh' %}">Riyadh</a>
                 <a href="{% url 'main_app:abha' %}">Abha</a>
                 <a href="{% url 'main_app:mekkah' %}">Mekkah</a>
-                <a href="{% url 'main_app:almadinah' %}">Almadinah</a>
+                <a href="{% url 'main_app:almadinah' %}">Al madinah</a>
             </div>
                 
             <div class="welcome">
@@ -29,18 +28,46 @@
                 
                 {% endblock %}
             </div>
-            <div>
+            <div class="pictures">
                 {% block pictures %}
                 
                 {% endblock %}
             </div>
-            {% block videos %}
-            
-            {% endblock %}
+            <div class="videos"></div>
+                {% block videos %}
+                
+
+                
+                {% endblock %}
+            </div>
             <div class="tour">
                 {% block tour %}
                 
                 {% endblock %}
+            </div>
+            <div class="home_pictures">
+                {% block home_pictures %}
+
+                {% endblock %}
+            </div>
+            <div class="bottom_page">
+                <div>
+                    <p>Powered by</p>
+                    <img src="{% static 'images/logo_1.webp' %}" class="logo">
+                </div>
+                <div class="ag">
+                    <p>Cities</p>
+                    <a href="{% url 'main_app:riyadhh' %}">Riyadh</a>
+                    <a href="{% url 'main_app:abha' %}">Abha</a>
+                    <a href="{% url 'main_app:mekkah' %}">Mekkah</a>
+                    <a href="{% url 'main_app:almadinah' %}">Al madinah</a>
+                </div>
+                <div class="ag">
+                    <a href="{% url 'main_app:contact' %}">contact us</a>
+                </div>
+                <div class="ag">
+                    <a href="{% url 'main_app:about' %}">about us</a>
+                </div>
             </div>
         </div>
     </body>

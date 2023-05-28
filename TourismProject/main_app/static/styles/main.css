@@ -10,7 +10,7 @@
 }
 .nav_bar{
     display: flex;
-    background-color: gray;
+    background-color: white;
     border-radius: 40px;
     justify-content: space-evenly;
     row-gap: 10px;
@@ -24,10 +24,12 @@
 }
 .nav_bar a:link, .nav_bar a:visited{
     text-decoration: none;
-    color: lightblue;
+    color: black;
 }
-.ss{
-    background-color: rgb(0, 84, 48); 
+.main_div{
+    position: relative;
+    background-attachment: fixed;
+    
 }
 .welcome{
     display: flex;
@@ -35,7 +37,8 @@
     text-align: center;
     font-size: 60px;
     margin-left: 10%;
-    margin-right: 10%;    
+    margin-right: 10%;
+    flex-direction: column;
 }
 .tour{
     color: white;
@@ -53,7 +56,7 @@
     margin-right: auto;
     vertical-align: middle;
     object-fit: contain;
-  }
+}
   .carousel-inner > .item > img {
     display: flex;
     object-fit:contain;
@@ -62,5 +65,44 @@
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
-    object-fit: contain;
-  }
+    object-fit: contain; 
+}
+.bottom_page{
+    display: flex;
+    background-color: #3e363f;
+    justify-content: space-evenly;
+    flex-direction: row;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.bottom_page a:link, .bottom_page a:visited{
+    text-decoration: none;
+    color: white;
+}
+.ag{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    display: flex;
+    height: 100px;
+    width: 100px;
+}
+.videos{
+    margin: 60px;
+}
+.pictures{
+    margin: 20px;
+}
+.home_pictures{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    column-gap: 10px;
+    row-gap: 10px;
+}

@@ -1,6 +1,8 @@
 {% extends  'main_app/base.html' %}
 {% load static %}
 
+{% block dibbg %}background-color: rgb(0, 84, 48);{% endblock %}
+
 {% block welcome %}
 <p>Wlcome to Saudi Arabia tourism website as the world's safest, most dynamic, and diverse, year-round destinations</p>
 {% endblock %}
@@ -9,4 +11,27 @@
 {% endblock %}
 {% block tour %}
 <p>Tourism destinations like no other, Saudi is enticing travelers to beat the heat this summer and discover the unique, diverse, gateway distinations of the country</p>
+{% endblock %}
+
+{% block home_pictures %}
+    <div style="display: flex; flex-direction: row; column-gap: 20px;" >
+        <div>
+        <p>Riyadh</p>
+        <a href="{% url 'main_app:riyadhh' %}"><img src="{% static 'images/riyadh_3.jpg' %}" style="height: 600px;" width="600px"></a>
+        </div>
+        <div>
+        <p>Abha</p>
+        <a href="{% url 'main_app:abha' %}"><img src="{% static 'images/abha_1.jpg' %}" style="height: 600px;" width="600px"></a>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row; column-gap: 20px;">
+        <div>
+        <p>Mekkah</p>
+        <a href="{% url 'main_app:mekkah' %}"><img src="{% static 'images/makkah_1.jpg' %}" style="height: 600px;" width="600px"></a>
+        </div>
+        <div>
+        <p>Al madinah</p>
+        <a href="{% url 'main_app:almadinah' %}"><img src="{% static 'images/madinah_1.jpg' %}" style="height: 600px;" width="600px"></a>
+        </div>
+    </div>
 {% endblock %}
