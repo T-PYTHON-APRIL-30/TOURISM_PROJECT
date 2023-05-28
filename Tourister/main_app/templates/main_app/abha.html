@@ -1,0 +1,45 @@
+{% extends 'main_app/index.html' %}
+{% load static %}
+
+{% block title %} Tourism in Abha city {% endblock %}
+
+{% block video %}
+    <video autoplay loop muted plays-inline src="{% static 'video/abha.mp4' %}" class="video"></video>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1 class="left">Abha <br> city</h1>
+        <p class="left">Start discovering Abha with all your senses.</p>
+        <div class="links left">
+            <a href="{% url 'main_app:home_page' %}#city" class="free-img">Cities</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content2 %}
+    <section id="city" class="cities">
+        <div class="row">
+            <div class="cities-col">
+                <img src="{% static 'img/abha1.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/abha2.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/abha3.jpg' %}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="cities-col">
+                <img src="{% static 'img/abha4.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/abha5.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/abha6.jpg' %}">
+            </div>
+        </div>
+    </section>
+{% endblock %}
