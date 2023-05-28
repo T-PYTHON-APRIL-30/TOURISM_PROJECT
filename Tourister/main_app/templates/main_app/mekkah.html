@@ -1,0 +1,45 @@
+{% extends 'main_app/index.html' %}
+{% load static %}
+
+{% block title %} Tourism in Mekkah city {% endblock %}
+
+{% block video %}
+    <video autoplay loop muted plays-inline src="{% static 'video/mekkah.mp4' %}" class="video"></video>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1 class="left">Mekkah <br> city</h1>
+        <p class="left">The holiest city for Muslims.</p>
+        <div class="links left">
+            <a href="{% url 'main_app:home_page' %}#city" class="free-img">Cities</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content2 %}
+    <section id="city" class="cities">
+        <div class="row">
+            <div class="cities-col">
+                <img src="{% static 'img/mekkah1.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/mekkah2.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/mekkah3.jpg' %}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="cities-col">
+                <img src="{% static 'img/mekkah4.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/mekkah5.jpg' %}">
+            </div>
+            <div class="cities-col">
+                <img src="{% static 'img/mekkah6.jpg' %}">
+            </div>
+        </div>
+    </section>
+{% endblock %}
