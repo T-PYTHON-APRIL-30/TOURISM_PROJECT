@@ -1,0 +1,121 @@
+{%extends 'main_app/base.html' %}
+{% load static %}
+
+{% block title %} Jeddah city {% endblock %}
+
+{% block nav-list %}
+{% endblock %}
+
+{% block title1 %}
+{% endblock %}
+
+{% block background %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{%static 'image/Jeddah-bg.jpeg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h1 class="text-white text-uppercase mb-md-3"><h1 style="font-size: 100px;"><span>Jeddah</span></h1></h1>
+                        <h1 class="display-3 text-white mb-md-4">A seaside city filled with beauty</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100"  src="{%static 'image/Jeddah5.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block cities %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Cities
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="{% url 'main_app:riyadh_page' %}">Riyadh</a>
+    <a class="dropdown-item" href="{% url 'main_app:dammam_page' %}">Dammam</a>
+    <a class="dropdown-item" href="{% url 'main_app:alUla_page' %}">AlUla</a>
+  </div>
+  {%endblock%}
+
+
+{% block content %}
+{% endblock %}
+
+{% block paragraph %}
+      <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="pb-3">
+                        <div class="blog-item">
+                            <div class="position-relative">
+                                <img class="img-fluid w-100" src="{% static 'image/jeddah-2.jpg'%}" alt="">
+                                <div class="blog-date">
+                                    <small class="text-white text-uppercase">Jeddah</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white mb-3" style="padding: 30px;">
+                            <div class="d-flex mb-3">
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Saudi Arabia</a>
+                                <span class="text-primary px-2">|</span>
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Jeddah</a>
+                            </div>
+                            <h2 class="mb-3">Jeddah - A city in the Makkah region</h2>
+                            <p>When you visit Jeddah, you will have the opportunity to witness a rich heritage celebrated by UNESCO. 
+                                From “Historical Jeddah” to the antique designs of balconies, stone walkways and ancient sidewalks, this destination unearths secrets that have inspired artists, writers and visitors alike for hundreds of years. 
+                                Here, you will have a chance to see magnificent sunsets shimmering off the divine Red Sea shores as well as having magical diving experiences featuring colorful coral reefs. 
+                                Whether on land or under the sea, you won’t soon forget Jeddah’s many year-round splendors. </p>
+                            <p></p>
+                            <h4 class="mb-3">Top Attractions</h4>
+                            <img class="img-fluid w-50 float-left mr-4 mb-2" src="{%static 'image/Jeddah.jpeg'%}">
+                            <p>1- Al Shallal Park. Jeddah is known for its lively ambiance, and its joyfulness is reflected in the amusement and theme parks. 
+                                When you pass through the North Cornish, you won’t miss seeing one of the most exciting and thrilling rides, the rollercoaster which appears from Alshallal theme park and you'll definitely hear shouts of excitement coming from other rides.
+                                 2-King Fahd's Fountain,Visible from all across the city, King Fahd Fountain is a much-loved Jeddah landmark, and a 30-year-old monument in the middle of the Red Sea. At 312 meters high, its waters decorate the sunset of Jeddah, and whether you are thinking of taking a picture or a video of that magical scene, seeing the fountain will not seem impossible no matter how far away you are. 
+                                 As the spectacular display of the fountain continues, you can walk around and try different kinds of food along the various stalls in Alhamra Cornish. 
+                                 Seven is the most popular kiosk on the walkway.
+                                 3- Red Sea Mall. When we mention the name of Red Sea Mall, the image of family and friends in a vibrant and joyful atmosphere comes to mind. Your stop at Red Sea Mall will lead you to enjoy an unparalleled shopping experience, being one of the largest shopping malls on the west coast of the Kingdom with a floor area of 242,000 sqm, and an ideal destination near the waterfront.
+                                 4- Tayebat Museum. Jeddah has a history that predates modern Arabia. 
+                                 As one of the Gulf’s oldest seaports and the gateway to the holy city of Makkah, Jeddah has been welcoming the world for centuries — which has helped transform the city into the culturally rich melting pot it is today.
+                                 </p>
+    
+                            <h5 class="mb-3">The charm of local drinks</h5>
+                            <img class="img-fluid w-50 float-right ml-4 mb-2" src="{%static 'image/Jeddah5.jpg'%}">
+                            <p>We recommend that you add more fun to your trip, by trying the local drinks of Jeddah, where you will find an exquisite variety of drinks that will taste like nothing you’ve ever tried. It's the special way the locals in Hijaz developed to express their love of life and very friendly gatherings. These drinks vary in color, consistency and ingredients in an effort to match the diversity of cultures within this great city.  </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                        <h3 class="text-primary mb-3">Jeddah</h3>
+                        <p>Jeddah is the most beautiful city in Saudi Arabia, as it is named the Bride of the Red sea. 
+                            It is a large city with the largest seaport on the Red Sea. </p>
+                    </div>
+    </div>
+  </div>
+
+  
+{%endblock%}
+
+

@@ -1,0 +1,123 @@
+{%extends 'main_app/base.html' %}
+{% load static %}
+
+{% block title %} Riyadh city {% endblock %}
+
+{% block nav-list %}
+{% endblock %}
+
+{% block title1 %}
+{% endblock %}
+
+{% block background %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{%static 'image/riyadh-1.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h1 class="text-white text-uppercase mb-md-3"><h1 style="font-size: 100px;"><span>Riyadh</span></h1></h1>
+                        <h1 class="display-3 text-white mb-md-4">the capital city of saudi Arabiar</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{%static 'image/riyadh-2.jpg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block cities %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Cities
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="{% url 'main_app:jeddah_page' %}">Jeddah</a>
+    <a class="dropdown-item" href="{% url 'main_app:dammam_page' %}">Dammam</a>
+    <a class="dropdown-item" href="{% url 'main_app:alUla_page' %}">AlUla</a>
+  </div>
+  {%endblock%}
+
+
+{% block content %}
+{% endblock %}
+
+{% block paragraph %}
+      <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="pb-3">
+                        <div class="blog-item">
+                            <div class="position-relative">
+                                <img class="img-fluid w-100" src="{% static 'image/riyadh-1.jpg'%}" alt="">
+                                <div class="blog-date">
+                                    <small class="text-white text-uppercase">Riyadh</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white mb-3" style="padding: 30px;">
+                            <div class="d-flex mb-3">
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Saudi Arabia</a>
+                                <span class="text-primary px-2">|</span>
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Riyadh</a>
+                            </div>
+                            <h2 class="mb-3">Riyadh - Live the Modern Life to its Fullest</h2>
+                            <p>In the ever-growing and flourishing city of Riyadh, you will discover the birthplace of the Kingdom of Saudi Arabia, along with its historical treasures hidden in the old palaces that witnessed the founding of the kingdom. 
+                                It is a destination for tourists from all over the globe who wish to discover a world of shopping, entertainment and business. 
+                                The malls offer the most exciting shopping experience, and the sand dunes combined with the brightest stars in the sky present the most magical experience in nature. 
+                                It is an environment full of a natural variety and unique characteristics that are intriguing for explorers. On the other side of the bustling city, you can enjoy a variety of experiences in luxurious restaurants that offer their special services, and their elaborate international dishes. 
+                                Simultaneously, the local Riyadh restaurants will tempt you with their authentic flavors and blend of spices originating from Saudi culture. Everyone is happy in the city of Riyadh where the biggest cultural events are always celebrated. 
+                                Endless entertainment destinations are always emerging, for the city's visitors to have intriguing and renewing experiences.</p>
+                            <p></p>
+                            <h4 class="mb-3">Top Attractions</h4>
+                            <img class="img-fluid w-50 float-left mr-4 mb-2" src="{%static 'image/riyimage3.jpeg'%}">
+                            <p>1- Sky Bridge at Kingdom Center.A panoramic view of the beauty of Riyadh.
+                                 2- Rawdat Tinhat,one of the most beautiful camping sites where a grove of dense green plant cover adorned with aromatic tulips is in tune with beautiful sounds of birds, great atmosphere and fresh air.
+                                 3- Al Murabba Historial Palace, which are like a window to the rich history of Riyadh and a scene from its ancient memory.
+                                 4- Diriyah Flagpole,From the heart of Diriyah, with its rich history that accompanied the stages of founding and unifying the Kingdom of Saudi Arabia, the Saudi flag rises on the flagpole of King Salman Square.
+                                This flagpole is considered the tallest flagpole in the capital city of Riyadh.
+                                 5- Saqr Al-Jazira Aviation Museum, if you are a fan of military aircraft, helicopters, history and skills of aviation, and are captivated by air shows, then Saqer al-Jazirah Aviation Museum, where heritage and mechanisms of ancient and modern warfare, is the best destination for you.
+                                 </p>
+    
+                            <h5 class="mb-3">Local Restaurants in Riyadh</h5>
+                            <img class="img-fluid w-50 float-right ml-4 mb-2" src="{%static 'image/riyimage2.jpeg'%}">
+                            <p>The tastiness of the Najdi flavor:In Alsaudi Restaurant, you are greeted by the delectability of traditional Saudi dishes that have been passed down for generations.
+                                Local dishes from different areas of Saudi Arabia:The city of Riyadh allows you to experience many tastes that are associated with the history of different Saudi regions such as: Jizani Hamour Maghash fish which is prepared by the most talented chefs at Suhail Restaurant. The diverse menu offers a kebab dish that is prepped the Hijazi way, and many other dishes born from Hasawi and Najdi cuisines. Meanwhile, Makki Corner Restaurant offers mathlotha and madfoon, and Maqoluba Restaurant offers a delicious blend of flavors in stir-fried vegetables served with rice and chicken.
+                                Local flavors await you: Tameesa restaurant offers a diversity of options for breakfast meals such as: tender liver with tomatoes, coriander, and lemon juice, alongside plates of shakshouka and mutabag.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                        <h3 class="text-primary mb-3">Riyadh</h3>
+                        <p>Riyadh is the capital and the largest tourism city in Saudi Arabia in terms of area and population</p>
+                    </div>
+    </div>
+  </div>
+
+  
+{%endblock%}
+
+

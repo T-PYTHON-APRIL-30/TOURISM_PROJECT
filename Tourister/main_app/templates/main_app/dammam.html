@@ -1,0 +1,119 @@
+{%extends 'main_app/base.html' %}
+{% load static %}
+
+{% block title %} Dammam city {% endblock %}
+
+{% block nav-list %}
+{% endblock %}
+
+{% block title1 %}
+{% endblock %}
+
+{% block background %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{%static 'image/dammambg.png'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h1 class="text-white text-uppercase mb-md-3"><h1 style="font-size: 100px;"><span>Dammam</span></h1></h1>
+                        <h1 style="font-size: 50px;" class="display-3 text-white mb-md-4">Bride of the Gulf and Queen of Cities</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{%static 'image/dammambg22.jpeg'%}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block cities %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Cities
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="{% url 'main_app:riyadh_page' %}">Riyadh</a>
+    <a class="dropdown-item" href="{% url 'main_app:jeddah_page' %}">Jeddah</a>
+    <a class="dropdown-item" href="{% url 'main_app:alUla_page' %}">AlUla</a>
+  </div>
+  {%endblock%}
+
+
+{% block content %}
+{% endblock %}
+
+{% block paragraph %}
+
+      <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="pb-3">
+                        <div class="blog-item">
+                            <div class="position-relative">
+                                <img class="img-fluid w-100" src="{% static 'image/dammam2.jpeg'%}" alt="">
+                                <div class="blog-date">
+                                    <small class="text-white text-uppercase">Riyadh</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white mb-3" style="padding: 30px;">
+                            <div class="d-flex mb-3">
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Saudi Arabia</a>
+                                <span class="text-primary px-2">|</span>
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Dammam</a>
+                            </div>
+                            <h2 class="mb-3">Dammam - A city in the Eastern Province region</h2>
+                            <p>Boasting endless views of the tranquil Arabian Gulf, Dammam is a modern metropolis that thrives on its coastal location. 
+                                Although it is known for its lush green parks, airy waterfronts and sandy beaches, it is highly enjoyable in the winter, too, with daytime temperatures averaging in the low 20s Celsius during the day and around 10 degrees at night. 
+                                The region also has a growing reputation as an arts, sports and entertainment destination. It is home to the kingdom’s first street-art exhibition, in Al Khobar’s Bayoonya district, and offers a range of cultural hubs and museums as well. 
+                                Dip into science and innovation at SCITECH, or get your fill of pop culture at the quirky Taybeen and Alfelwah and Aljowharah museums. 
+                                As evening falls, wander the walkways of Dammam's Share Al Hob souq, where you may encounter traders, performers and street musicians.</p>
+                            <h4 class="mb-3">When in Dammam, go and explore</h4>
+                            <img class="img-fluid w-50 float-left mr-4 mb-2" src="{% static 'image/dammam1.jpeg'%}">
+                            <p>Half Moon Bay:A short drive south from Dammam, Half Moon Bay was a stop for many of the Arab traders from the Arabian Gulf area. It has become a top draw for recreation thanks to its family-friendly setup: The entrances to the cove are very shallow and tranquil, and the average water depth reaches about 7 meters, so it’s an ideal location to learn how to scuba dive, or just dip your toes on a warm winter day.
+                                Saudi Arabia's cultural hub: The iconic monolithic design of the King Abdulaziz Center for World Culture, known as Ithra, has become a symbol of Saudi’s cultural renaissance. The sprawling building houses a theater, library, cinema, galleries and museum, alongside a wealth of interactive activities for children. The Ithra Journey Tour, a 30-minute guided walk, offers an ideal overview of the complex.
+                                Al Khobar waterfront: Dancing fountains and landscaped gardens make this seafront stretch a family favorite, where kids can play in the park as adults take Instagram-worthy snaps of the historic water tower and remarkable King Fahd Causeway. For a bite among the sights, discover a range of dining options on the new Ajdan Walk south of the new corniche, or immerse yourself in Al Khobar’s café culture at one of its dozens of waterfront coffee shops. Consider catching the sunset on a private boat trip.
+
+                            </p>
+    
+                            <h5 class="mb-3">Where to have fun</h5>
+                            <img class="img-fluid w-50 float-right ml-4 mb-2" src="{%static 'image/dammam4.png'%}">
+                            <p>Get a dose of fast-paced fun with a visit to GP Karting, or try your skills at Al Khobar's Gravity Trampoline Park, where climbing walls, trampolines and virtual reality games await. 
+                                At the oceanfront Sunset Beach Resort, choose between high-thrill activities or relaxing at the spa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                        <h3 class="text-primary mb-3">Dammam</h3>
+                        <p>Dammam, which is located on the Arabian Gulf, is considered one of the most beautiful and most important tourist cities in Saudi Arabia. I</p>
+                    </div>
+    </div>
+  </div>
+
+  
+{%endblock%}
+
+
