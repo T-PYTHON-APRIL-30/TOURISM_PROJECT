@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Saudi Arabia{% endblock %}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="{% static 'style/main1.css' %}">
+</head>
+<body style="background-image: url('{% block BGimage %}static/images/Background.jpg{% endblock %}'); background-size: cover;">
+	<section class="fade-in">
+		
+	  
+		<div class="container">
+			<div class="bar">
+				<img class="logo" src="{% static 'images/saudi-tourism-authority-logo-278AE009B2-seeklogo.com.png' %}" alt="Tourism Logo">
+				<div class="nav-bar">
+					<span class="material-symbols-outlined">open_in_new</span>
+					<a style="color: whitesmoke;" href="{% url 'Guide:al-ula' %}">Al-Ula</a>
+					<a style="color: whitesmoke;" href="{% url 'Guide:damam' %}">Damam</a>
+					<a style="color: whitesmoke;" href="{% url 'Guide:jeddah' %}">Jeddah</a>
+					<a style="color: whitesmoke;" href="{% url 'Guide:riyadh' %}">Riyadh</a>
+				</div>
+				<div class="top-right">
+					<a style="color:white;" href="{% url 'Guide:home_page' %}">Home</a>
+					<a style="color:white;" href="">Contact</a>
+				</div>
+			</div>
+			<div class="phara">
+				<p>{% block phrase %}Welcome to Saudi Arabia where the impossible is a standard{% endblock %}</p>
+				<p>{% block cont %}It's one of the Middle East's biggest countries and the home to a unique culture and the birthplace of the Islamic religion.{% endblock %}</p>
+			</div>
+			
+			
+			<div class="cont">
+				<p>{% block cont2 %}It's rich in nature with a lot of variation, and here are some pictures:{% endblock %}</p>
+				<div class="places-pic">
+					<a style="color: aliceblue;" href="{% url 'Guide:al-ula' %}">
+						{% block img1 %}
+						<img class="pics1" src="https://images.pexels.com/photos/13137654/pexels-photo-13137654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Al-Ula">Northren Reigon: Al-Ula
+						{% endblock %}
+					</a>
+					<a style="color: aliceblue;" href="{% url 'Guide:damam' %}">
+						{% block img2 %}
+						<img class="pics2" src="https://images.pexels.com/photos/4533239/pexels-photo-4533239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Damam in 1980*">Eastren Reigon: Dammam in 1980*
+						{% endblock %}
+					</a>
+					<a style="color: aliceblue;" href="{% url 'Guide:jeddah' %}">
+						{% block img13 %}
+						<img class="pics3" src="https://images.pexels.com/photos/15612136/pexels-photo-15612136/free-photo-of-a-mosaic-pavement-and-traditional-buildings-in-a-desert-town.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Jeddah">Westren Reigon: Jeddah
+						{% endblock %}
+					</a>
+					<a style="color: aliceblue;" href="{% url 'Guide:riyadh' %}">
+						{% block img4 %}
+						<img class="pics4" src="https://images.pexels.com/photos/7107495/pexels-photo-7107495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Riyadh">Centeral Reigon: Riyadh
+						{% endblock %}
+					</a>
+				</div>
+				<div class="footer">
+					{% block footerp %} <p style="color: white; font-family: 'Roboto', sans-serif; font-size: medium;" > Brief video: </p> {% endblock %}
+					{% block footervid %} <iframe width="560" height="315" src="https://www.youtube.com/embed/ollH45NDXu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>{% endblock %}
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+	<script>
+		const element = document.querySelector('.fade-in');
+		
+		function isInViewport(element) {
+		  const rect = element.getBoundingClientRect();
+		  return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		  );
+		}
+		
+		function handleScroll() {
+		  if (isInViewport(element)) {
+			element.classList.add('fade-in-animation');
+			window.removeEventListener('scroll', handleScroll);
+		  }
+		}
+		
+		window.addEventListener('scroll', handleScroll);
+		</script>
+</body>
+</html>
