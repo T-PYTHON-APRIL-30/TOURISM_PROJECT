@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        p {color: red};</style>
+</head>
+<body>
+    
+
+    {% block content%}
+    <div>
+        <img src="https://s3-us-west-1.amazonaws.com/dooolab-com/pictures/2YXYudin2YTZhSDYp9mE2YXZhdmE2YPYqQ_25770/2YXYudin2YTZhSDYp9mE2YXZhdmE2YPYqQ_25770_thumb_2x.jpg" alt="backgraund picture"/>
+        <h1 class="title">"ننقلكم في رحلة لتنبهروا في جمال مدينة حجر اليمامه الرياض" translates to "We take you on a trip to be dazzled by the beauty of Hajar Al-Yamamah city Riyadh" in English¹.
+
+            المصدر: محادثة مع Bing، ٨‏/١١‏/١٤٤٤ هـ
+            (1) . https://bing.com/search?q=translate+%22%d9%86%d9%86%d9%82%d9%84%d9%83%d9%85+%d9%81%d9%8a+%d8%b1%d8%ad%d9%84%d8%a9+%d9%84%d8%aa%d9%86%d8%a8%d9%87%d8%b1%d9%88%d8%a7+%d9%81%d9%8a+%d8%ac%d9%85%d8%a7%d9%84+%d9%85%d8%af%d9%8a%d9%86%d8%a9+%d8%ad%d8%ac%d8%b1+%d8%a7%d9%84%d9%8a%d9%85%d8%a7%d9%85%d9%87+%28%d8%a7%d9%84%d8%b1%d9%8a%d8%a7%d8%b6+%29%22+to+English.
+            (2) Google Translate. https://translate.google.co.in/?hl=en&tab=TT.
+            (3) ترجمة Google. https://translate.google.com.lb/.
+            (4) Google Translate - Apps on Google Play. https://play.google.com/store/apps/details?id=com.google.android.apps.translate.</h1>
+        <p>Tourism in Saudi Arabia is diverse and includes the most attractive and active religious tourism due to the presence of the Two Holy Mosques, environmental tourism, business tourism, as well as shopping tourism which enjoys a significant position in terms of attraction. Saudi Arabia also has important historical and archaeological sites such as Madain Saleh, Al Diriyah area and historical Jeddah which are areas that have been included in the list of World Heritage Sites. You can visit the official website of tourism in Saudi Arabia at this link  for more information.</p>
+        <a href="{%url 'tourismApp:Riyadh'%}" target="_blank">Click here to go to riyadh page</a>
+        <a href="{%url 'tourismApp:Abha'%}" target="_blank">Click here to go to Abha page</a>
+        <a href="{%url 'tourismApp:Mecca'%}" target="_blank">Click here to go to Mecca page</a>
+        <a href="{%url 'tourismApp:Alola'%}" target="_blank">Click here to go to Alola page</a>
+        
+
+    </div>
+    {% endblock %}
+
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    {%endblock%}
+    
+</body>
+</html>
