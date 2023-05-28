@@ -7,10 +7,6 @@ def home_page(request: HttpRequest):
     return render(request, 'main_app/home.html')
 
 
-def city_page(request: HttpRequest):
-    return render(request, 'main_app/city.html')
-
-
 def riyadh_city(request: HttpRequest):
     return render(request, 'main_app/riyadh.html')
 
