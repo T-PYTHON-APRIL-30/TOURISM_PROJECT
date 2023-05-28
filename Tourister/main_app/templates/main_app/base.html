@@ -167,14 +167,14 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{%static 'img/makkah.jpg'%}" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
+                        <a class="destination-overlay text-white text-decoration-none" href="{% url 'main_app:makkah_page' %}">
                             <h5 class="text-white">Makkah al-Mukarramah</h5>                      </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{% static 'img/riyadh1.jpg'%}" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
+                        <a class="destination-overlay text-white text-decoration-none" href="{% url 'main_app:riyadh_page' %}">
                             <h5 class="text-white">ٌRiyadh</h5>
                         </a>
                     </div>
@@ -182,7 +182,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{% static 'img/jeddah1.jpg'%}" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
+                        <a class="destination-overlay text-white text-decoration-none" href="{% url 'main_app:jeddah_page' %}">
                             <h5 class="text-white">Jeddah</h5>
                         </a>
                     </div>
@@ -190,23 +190,20 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{%static 'img/alula.jpg' %}" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
+                        <a class="destination-overlay text-white text-decoration-none" href="{% url 'main_app:alula_page' %}">
                             <h5 class="text-white">Alula</h5>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{%static 'img/neom0.jpg'%}" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Neom</h5>
-                        </a>
+                     
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{% static 'img/hail.jpg'%}" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
+                        <a class="destination-overlay text-white text-decoration-none" href="{% url 'main_app:riyadh_page' %}">
                             <h5 class="text-white">Hail</h5>
                         </a>
                     </div>
@@ -215,6 +212,55 @@
         </div>
         {% endblock%}
     </div>
+
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-primary"><span class="text-white">Saudi</span>Arabia</h1>
+                </a>
+                <p>A special site to learn about tourism in Saudi Arabia.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="https://twitter.com/Saudi_MT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="https://www.linkedin.com/company/ministry-of-tourism-of-saudi-arabia/?originalSubdomain=sa"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="https://www.instagram.com/saudi.mt/?hl=ar"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="https://www.youtube.com/@SaudiMT/about"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="{% url 'main_app:home_page' %}"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="{% url 'main_app:riyadh_page' %}"><i class="fa fa-angle-right mr-2"></i>Riyadh</a>
+                    <a class="text-white-50 mb-2" href="{% url 'main_app:alula_page' %}"><i class="fa fa-angle-right mr-2"></i>AlUla</a>
+                    <a class="text-white-50 mb-2" href="{% url 'main_app:jeddah_page' %}"><i class="fa fa-angle-right mr-2"></i>Jeddah</a>
+                    <a class="text-white-50 mb-2" href="{% url 'main_app:makkah_page' %}"><i class="fa fa-angle-right mr-2"></i>Makkah</a>
+                    <a class="text-white-50" href="{% url 'main_app:contact_page' %}"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>403 Street, Riyadh, KSA</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+966118808844</p>
+                <p><i class="fa fa-envelope mr-2"></i>info@mt.gov.sa</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Conract</h6>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Footer End -->
+
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
