@@ -3,7 +3,9 @@
 {% load embed_video_tags %}
 <!--  -->
 {% load static %}
-<!--  -->
+<!-- title -->
+{% block title%} Madinah {%endblock%}
+<!-- backgoundImage -->
 {% block backgoundImage %}/static/images/madinah.jpg {% endblock %}
 <!--  -->
 {% block content %}
@@ -27,13 +29,22 @@
 {%block video%}
 <h1 class="text-vid">Videos</h1>
 <div class="blockvideo">
-  {% for vid in videos %}
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/oa8Q9EuAv_w"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <!-- {% for vid in videos %}
   <div class="videos-cont">
-    <!--  -->
+    
     {% video vid.video 'small'%}
   </div>
-  <!--  -->
-  {%endfor%}
+  
+  {%endfor%} -->
 </div>
 <!--  -->
 {%endblock%}

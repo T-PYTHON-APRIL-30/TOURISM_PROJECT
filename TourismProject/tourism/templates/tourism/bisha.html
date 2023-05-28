@@ -3,7 +3,9 @@
 {% load embed_video_tags %}
 <!--  -->
 {% load static %}
-<!--  -->
+<!-- title -->
+{% block title%} Bisha {%endblock%}
+<!-- backgoundImage -->
 {% block backgoundImage %}/static/images/bisha.webp {% endblock %}
 <!--  -->
 {% block content %}
@@ -21,6 +23,8 @@
 {% block img_2%}{% static 'images/imgb2.webp'%}{%endblock%}
 <!-- img3 -->
 {% block img_3%}{% static 'images/imgb3.jpg'%}{%endblock%}
+<!--opacity  -->
+{%block bishaOpacity%} opacity-75{%endblock%}
 <!--  -->
 {%block video%}
 <h1 class="text-vid">Videos</h1>
