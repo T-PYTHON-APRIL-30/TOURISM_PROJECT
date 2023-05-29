@@ -1,0 +1,273 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Travelism</title>
+        <script src="https://kit.fontawesome.com/75ef6f1513.js" crossorigin="anonymous"></script>
+        <style>
+            * {
+                margin:0px;
+                padding:0px;
+                font-family: 'Ubuntu', sans-serif;
+                color: white;
+                text-decoration: none;
+                scroll-behavior: smooth;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                row-gap: 2.5rem;
+                background-image:linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url("https://media.cntraveler.com/photos/61b8fb5605e0328d3acb833c/16:9/w_2560%2Cc_limit/Saudi%2520Arabia_GettyImages-1307891525.jpg");
+                background-size:cover;
+                min-height: 100vh;
+                padding: 18px 35px;
+            }
+            /* Header styles */
+            .header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 15vh;
+            }
+            .menu_bar {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                column-gap: 25px;   
+            }
+            .logo{
+                color: white ;
+            }
+            /*Content Style*/
+            .content{
+                width: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+            }
+            .content h1{
+                font-size: 62px;
+                padding-bottom: 10px;
+            }
+            .hero_btn{
+                display:inline-block;
+                border: 1px solid #fff;
+                padding: 12px 34px;
+                font-size: 13px;
+                background: transparent;
+                position: relative;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .hero_btn:hover{
+                border: 1px solid #ac4407;
+                background: #ac4407;
+                transition: 1s;
+            }
+
+            /*City content*/
+            .city_container{
+                width: 80%;
+                margin: auto; 
+                text-align: center;
+                padding-top: 100px;
+            }
+            .city_container h1{
+                font-size: 36px;
+                font-weight: 600;
+            }
+            .city_container p{
+                color: #777;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 22px;
+                padding: 10px;
+            }
+            .row{
+                margin: 5%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .city_col{
+                flex-basis: 31%;
+                background: #4a3f44;
+                border-radius: 10px;
+                margin-bottom: 5%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+                transition: 0.5s;
+
+                
+            }
+            .city_col h3{
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+
+            .city_col:hover{
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+            }
+            .city_col p{
+                color:#fff
+            }
+            /*info container style*/
+            .info_container{
+                width: 80%;
+                margin: auto;
+                text-align: center;
+                padding-top: 100px;
+            }
+            .info_container h1{
+                margin-bottom: 50px;
+            }
+            .info_col{
+                flex-basis: 24%;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                position: relative;
+                overflow: hidden;
+            }
+            .info_col img{
+                width: 100%;
+                display: block;  
+            }
+            .layer{
+                background: transparent;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.5s;
+            }
+            .layer:hover{
+                background:rgba(100, 74, 77,0.5);
+            }
+            .layer h3{
+                width: 100%;
+                font-weight: 500;
+                color: #fff;
+                font-size: 26px;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+                position: absolute;
+                opacity: 0;
+                transition: 0.5s;
+            }
+            .layer:hover h3{
+                bottom: 49%;
+                opacity: 1;
+            }
+            /* about us styles */
+            .about_us{
+                width: 100%;
+                text-align: center;
+                padding: 30px 0;
+            }
+            .about_us h4{
+                margin-bottom: 25px;
+                margin-top: 20px;
+            }
+            .icons .fa{
+                color: #ac4407;
+                margin: 0 13px;
+                cursor: pointer;
+                padding: 18px 0;
+            }
+
+            /* Footer styles */
+            footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            }
+
+            footer p {
+            font-size: 14px;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1 class="logo">Travelism</h1>
+                <div class="menu_bar">
+                    <a href="{% url 'home_page' %}">Home</a>
+                    <a href="{% url 'about_sa' %}">Saudi Arabia</a>
+                    <a href="#destination">Destination</a>
+                    <a href="#about">About us</a>
+                </div>
+                
+            </div>
+
+            <div class="content">
+                <h1>Discover and enjoy your new places and experiences in Saudi Arabia</h1>
+                <a href="{% url 'about_sa' %}" class="hero_btn">Know more</a>
+
+            </div>
+        </div>
+
+        <div id="destination" class="info_container">
+            <h1 style="color: black">Popular Destination</h1>
+            <p style="color: black">Top tourist hotspots in Saudi Arabia. From the towering skyscrapers of Riyadh to the ancient ruins of Mada'in Saleh.</p>
+            <div class="row">
+                <div class="info_col">
+                    <img src="{%static 'images/Riyadh.png'%}">
+                    <div class="layer">
+                        <a href="{% url 'riyadh_page' %}"><h3>Riyadh</h3></a>
+                    </div>
+                </div>
+
+                <div class="info_col">
+                    <img src="{%static 'images/Aula.png'%}">
+                    <div class="layer">
+                        <a href="{% url 'alula_page' %}"><h3>Alula</h3></a>
+                    </div>
+                </div>
+
+                <div class="info_col">
+                    <img src="{%static 'images/Jeddah.png'%}" alt="Destination image">
+                    <div class="layer">
+                        <a href="{% url 'jeddah_page' %}"><h3>Jeddah</h3></a>
+                    </div>
+                </div>
+
+
+                <div class="info_col">
+                    <img src="{%static 'images/Abha.png'%}" alt="Destination image">
+                    <div class="layer">
+                        <a href="{% url 'abha_page' %}"><h3>Abha</h3></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id ="about"class="about_us">
+            <h4 style="color: #333;">About Us</h4>
+            <p style="color: #333;">Travelism is a website offer a comprehensive guide to the top destinations and experiences in the Kingdom of Saudi Arabia<br>At our core, we are a team of paaionate individuals driven by a common goal; to showcase the beauty and diversity of Saudi Arabia to the world.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-youtube"></i>
+
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2023 Travelism Website</p>
+        </footer>
+    </body>
+
+   
+</html>
