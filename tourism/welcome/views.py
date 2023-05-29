@@ -5,10 +5,10 @@ from django.http import HttpRequest, HttpResponse
 def home_page(request:HttpRequest):
     return render (request, "welcome/home_page.html")
 
-def Al-ahsa_page(request:HttpRequest):
+def Al_ahsa_page(request:HttpRequest):
     return render (request, "welcome/Al-ahsa_page.html")
 
- def Al-ola_page(request:HttpRequest):
+def Al_ola_page(request:HttpRequest):
     return render (request, "welcome/Al-ola_page.html")
 
 def Riyadh_page(request:HttpRequest):
