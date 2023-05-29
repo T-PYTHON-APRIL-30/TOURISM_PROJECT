@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% comment %} <link rel="icon" href={% block page_icon %} {% endblock %}> {% endcomment %}
+    <title> {% block title %} Visit Saudi {% endblock %} </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href={% static "styles/style.css"%}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        
+    </style>    
+</head>
+
+<body>
+    <div class="container"> 
+        <div class="nav_bar">
+            <img class="nav_logo" src={% static 'images/visit_white.png' %}>
+            <div class="nav_list">
+                <a href={% url 'visit_saudi:home_page'%}> <img class="nav_logos" src={% static "images/map_logo.png" %}> Home</a>
+                <a href={% url 'visit_saudi:riyadh'%}> <img class="nav_logos" src={% static "images/riyadh_logo.png" %}> Riyadh</a>
+                <a href={% url 'visit_saudi:abha'%}> <img class="nav_logos" src={% static "images/abha_logo.png" %}> Abha</a>
+                <a href={% url 'visit_saudi:mekkah'%}> <img class="nav_logos" src={% static "images/mekkah_logo.png" %}> Mekkah</a>
+                <a href={% url 'visit_saudi:alula'%}> <img class="nav_logos" src={% static "images/alula_logo_2.png" %}> AlUla</a>
+
+            </div>    
+        </div>  
+        <div class="about_city" style="background-image:url({% block city_back %}{% endblock%})">
+        <h2> {% block city_title %}{% endblock %}</h2>
+        <p> {% block city_about %}{% endblock %} </p>
+
+
+        </div>  
+      
+          <div class="slide-container">
+            <span class="slider-span" id="slider-span1"></span>
+            <span class="slider-span" id="slider-span2"></span>
+            <span class="slider-span" id="slider-span3"></span>
+            <span class="slider-span" id="slider-span4"></span>
+
+    
+            <div class="image-slider">
+                <div class="slides-div" id="slide-1">
+                    <img src={% block city_img1 %}{% endblock %} alt="" class="img" id="img1">
+                    <a href="#slider-span1" class="button" id="button-1"></a>
+                </div>
+                <div class="slides-div" id="slide-2">
+                    <img src={% block city_img2 %}{% endblock %} alt="" class="img" id="img2">
+                    <a href="#slider-span2" class="button" id="button-2"></a>
+                </div>
+                <div class="slides-div" id="slide-3">
+                    <img src={% block city_img3 %}{% endblock %} alt="" class="img" id="img3">
+                    <a href="#slider-span3" class="button" id="button-3"></a>
+                </div>
+                <div class="slides-div" id="slide-4">
+                  <img src={% block city_img4 %}{% endblock %} alt="" class="img" id="img4">
+                  <a href="#slider-span4" class="button" id="button-4"></a>
+              </div>
+            </div>
+        </div>
+      {% comment %} </div> {% endcomment %}
+
+    </div>
+      
+      
+</body>    
+
+
+</html>

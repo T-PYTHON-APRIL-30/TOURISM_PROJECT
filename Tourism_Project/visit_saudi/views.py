@@ -4,27 +4,21 @@ from django.http import HttpRequest, HttpResponse
 # Create your views here.
 
 
-def home(request:HttpRequest):
-
-    return HttpResponse('Home')
-
-def riyadh(request:HttpRequest):
-
-    return HttpResponse('riyadh')
-
-def abha(request:HttpRequest):
-
-    return HttpResponse('abha')
-
-def mekkah(request:HttpRequest):
-
-    return HttpResponse('mekkah')
-
-def alula(request:HttpRequest):
-
-    return HttpResponse('AlUla')
+def home(request: HttpRequest):
+    return render(request, "visit_saudi/home.html")
 
 
+def riyadh(request: HttpRequest):
+    return render(request, "visit_saudi/riyadh.html")
 
 
+def abha(request: HttpRequest):
+    return render(request, "visit_saudi/abha.html")
 
+
+def mekkah(request: HttpRequest):
+    return render(request, "visit_saudi/mekkah.html")
+
+
+def alula(request: HttpRequest):
+    return render(request, "visit_saudi/ula.html")

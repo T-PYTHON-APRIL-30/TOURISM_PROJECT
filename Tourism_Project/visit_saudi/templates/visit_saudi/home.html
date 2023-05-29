@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visit Saudi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .cities {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .title {
+            font-family: 'Cairo', sans-serif;
+            margin: 1in;
+
+        }
+
+        .background {
+            width: 100%;
+            height: 400px;
+        }
+        .city{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .city_map {
+            height: 300px;
+        }
+        .city_name{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='main'>
+        <img class='background' src={% static 'images/saudiv3.png' %}>
+        <h3 class='title'> Saudi Arabia, a land of rich cultural heritage and breathtaking natural wonders, offers a
+            mesmerizing experience for tourists from around the world. From the spiritual pilgrimage to Makkah to the
+            historical wonders of Alula and the lush landscapes of Abha, the country has something to offer every
+            traveler. Immerse yourself in the vibrant markets of Riyadh, explore the ancient ruins of Madain Saleh, or
+            witness the stunning coral reefs of the Red Sea. Discover the warmth and hospitality of the Saudi people,
+            indulge in delicious Arabian cuisine, and create unforgettable memories in this captivating destination.
+        </h3>
+        <div class='cities'>
+            <div class='city'>
+
+            </div>
+            <div class='city'>
+                <a class='city_name' href={% url 'visit_saudi:riyadh' %}> <img class="city_map" src={% static "images/riyadh-map.png" %}>
+                    Riyadh</a>
+            </div>
+            <div class='city'>
+                <a class='city_name' href={% url 'visit_saudi:abha' %}> <img class="city_map" src={% static "images/asir-map.png" %}>
+                    Abha</a>
+            </div>
+            <div class='city'>
+                <a class='city_name' href={% url 'visit_saudi:alula' %}> <img class="city_map" src={% static "images/tabuk-map.png" %}>
+                    AlUla</a>
+            </div>
+            <div class='city'>
+                <a class='city_name' href={% url 'visit_saudi:mekkah' %}> <img class="city_map" src={% static "images/makkah-province-map.png" %}> Mekkah</a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
