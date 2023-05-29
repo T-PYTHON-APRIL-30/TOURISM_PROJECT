@@ -1,6 +1,5 @@
 from django.shortcuts import render, resolve_url
 from django.http import HttpRequest, HttpResponse
-from django.templatetags.static import static
 
 
 # Create your views here.
