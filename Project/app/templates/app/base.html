@@ -28,9 +28,13 @@
       </nav> 
     </header>
 
-  {% block content %} 
-    
-  {% endblock %}
+    {% block content %} 
+    {% endblock %}
+
+  <div style="padding:1.4rem 3.2rem">
+    {% block subContent %}
+    {% endblock %} 
+  </div>
 
     <!-- content 1  -->
 <div class="content1">
@@ -62,7 +66,7 @@
         <a href="#">Terms</a>
       </li>
       <li>
-        <a href="#">Privacy Policy</a>
+        <a href="#">Privacy & Policy</a>
       </li>
     </ul>
     <p class="copyright">Copyright © 2023</p>
