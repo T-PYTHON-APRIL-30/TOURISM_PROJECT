@@ -1,0 +1,89 @@
+{%extends 'main_app/base.html'%}
+{%load static%}
+{%block headstyle%}
+    
+<style>
+.container{
+    background-image: url("{%block image%} {%static 'images/riyadh/bgr.jpeg'%} {%endblock%}");
+    background-size: cover;}
+    .top{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px ;
+        justify-content: start;
+        align-items: center;
+        padding: 15px;
+    }
+    .title{
+        color: rgb(40, 39, 38);
+       
+
+    }
+    .titleCity{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        background-color: none;
+        padding: 5px;
+    }
+    .parag{
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(47, 47, 41, 0.194);
+        padding: 25px;
+    }
+
+</style>
+{%endblock%} 
+{% block content %}
+<div class="top">
+    <div class="title">
+        <h1 class="titleCity">Riyadh</h1>
+        <P class="parag">Riyadh, the capital city of Saudi Arabia, offers a variety of tourist attractions that showcase the country's rich history, culture, and natural beauty.</P>
+    </div>
+  
+
+</div>
+<div class="gallery">
+<div class="slideshow-container fade">
+
+  <!-- Full images with numbers and message Info -->
+  <div class="Containers">
+    <div class="MessageInfo">1 / 4</div>
+    <img src="{% static 'images/riyadh/ksa.jpg' %}" style="width:100%">
+    <div class="Info">Kingdom Centre: This towering skyscraper is one of the most recognizable landmarks in Riyadh and offers stunning views of the city from its observation deck.</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">2 / 4</div>
+    <img src="{% static 'images/riyadh/build2.jpg' %}" style="width:100%">
+    <div class="Info">The King Abdullah Financial District (KAFD) is a large-scale development project located in Riyadh</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">3 / 4</div>
+    <img src="{%static 'images/riyadh/blvr3.jpg'%}" style="width:100%">
+    <div class="Info">The Boulevard Riyadh is part of a larger effort by the Saudi government to promote economic diversification and attract international investment and talent to the country. </div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">4 / 4</div>
+    <iframe width="920" height="515" src="https://www.youtube.com/embed/35g7UMVbfPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="Info"> </div>
+  </div>
+
+
+  <!-- Back and forward buttons -->
+  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The circles/dots -->
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+  <span class="dots" onclick="currentSlide(4)"></span>
+</div> 
+{% endblock %}

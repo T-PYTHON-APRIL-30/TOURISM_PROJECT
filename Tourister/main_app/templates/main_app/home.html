@@ -1,0 +1,77 @@
+{% extends 'main_app/base.html' %}
+{%load static%}
+{%block title%}
+Home page
+{%endblock%}
+{%block headstyle%}
+<style>
+
+  .phrase{
+   display: flex;
+   flex-direction: column;
+   row-gap: 25px;
+   justify-content: start;
+  }
+  .list-cities{
+    background-color: rgba(250, 235, 215, 0.208);
+    border-radius: 25px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: space-between;
+    padding: 5px 20px;
+    margin-top: 20px;
+  }
+  .paragraph{
+    width: 70%;
+    background-color: rgba(250, 235, 215, 0.4);
+    border-radius: 20px;
+    padding: 25px;
+  }
+  .paragraph p{
+    font-size: 15pt;
+  }
+  .list-cities ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    text-decoration: none;
+    color: black;
+    border: 30px;
+    border-color: antiquewhite;
+  }
+  .list-cities li a{
+    
+    color:antiquewhite;
+    background-color:rgba(26, 39, 22, 0.642);
+    
+  }
+  .list-cities li a:hover{
+    color:rgb(12, 12, 12);
+    background-color: rgba(250, 235, 215, 0.4);
+    
+  }
+</style>
+    {%endblock%} 
+{% block content %}
+<div class="phrase">
+  <h1>Welcome to Tourister!</h1>
+  <p><strong> We're here to help you discover the beauty of Saudi Arabia.</strong></p>
+  <div class="paragraph">
+    <p >Tourism in Saudi Arabia is a growing industry with significant potential. The country is home to a rich cultural heritage, stunning natural landscapes, and modern architectural marvels. Saudi Arabia has been investing heavily in developing its tourism industry, and in recent years, the government has launched several initiatives to attract tourists from around the world. Some of the most popular tourist destinations in Saudi Arabia include the historical city of Makkah, the cosmopolitan city of Riyadh, the ancient ruins of Madain Saleh, the sparkling waters of the Red Sea, and the breathtaking desert landscapes of the Empty Quarter. The government has also been working to improve infrastructure and develop new tourist attractions, such as the futuristic city of NEOM and the Qiddiya entertainment complex. With its diverse offerings and ambitious plans for growth, Saudi Arabia is poised to become a major player in the global tourism industry.</p>   
+  </div>
+  <div class="list-cities">
+    <h2 >Explore our cities:</h2>
+    <ul >
+        <li><a href="{% url 'main_app:riyadh_page' %}">Riyadh</a></li>
+        <li><a href="{% url 'main_app:alola_page' %}">Al-Ola</a></li>
+        <li><a href="{% url 'main_app:abha_page' %}">Abha</a></li>
+        <li><a href="{% url 'main_app:makka_page' %}">Makkah</a></li>
+        
+    </ul>
+   </div>
+</div>
+  
+
+{% endblock %}

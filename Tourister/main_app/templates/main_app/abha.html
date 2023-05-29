@@ -1,0 +1,67 @@
+{%extends 'main_app/base.html'%}
+{%load static%}
+{%block headstyle%}
+    
+<style>
+.container{
+    background-image: url("{%block image%} {%static 'images/abha/abha.jpg'%} {%endblock%}");
+    background-size: cover;}
+    .title{
+        background-color: rgba(207, 224, 191, 0.527);
+        color: rgb(46, 61, 46);
+    }
+</style>
+{%endblock%} 
+{% block content %}
+<div class="title">
+    <h1>Abha</h1>
+    <P>Abha is a city located in the southwestern region of Saudi Arabia, in the province of Asir. The city is known for its stunning natural beauty, rich cultural heritage, and unique architecture.</P>
+</div>
+<div class="gallery">
+<div class="slideshow-container fade">
+
+  <!-- Full images with numbers and message Info -->
+  <div class="Containers">
+    <div class="MessageInfo">1 / 4</div>
+    <img src="{% static 'images/abha/abha1.jpg' %}" style="width:100%">
+    <div class="Info">Al-Fan Street is a popular tourist destination located in the city of Abha in the southwestern province of Asir, Saudi Arabia. The street is known for its unique architecture, traditional markets, and lively atmosphere.</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">2 / 4</div>
+    <img src="{% static 'images/abha/rjalalm3.jpeg' %}" style="width:100%">
+    <div class="Info">Rejal Al-Ma'a is a historic village known for its unique architecture, rich cultural heritage, and stunning natural beauty.</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">3 / 4</div>
+    <img src="{%static 'images/abha/sddefault.jpg'%}" style="width:100%">
+    <div class="Info">Al-Soudah Mountain Resort, which offers a range of outdoor activities, including hiking, ziplining, and mountain biking. </div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">4 / 4</div>
+    <img src="{%static 'images/abha/abha5.jpg'%}" style="width:100%">
+    <div class="Info">Jebel al-Shada is amountainous area covered with lush green vegetation and forest, and it is known for its pleasant climate and stunning natural beauty.. </div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">4 / 4</div>
+    <iframe width="920" height="560" src="https://www.youtube.com/embed/gYonrWBBhzQ" title="propel city Abha 🇸🇦" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="Info"> </div>
+  </div>
+
+  <!-- Back and forward buttons -->
+  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The circles/dots -->
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+  <span class="dots" onclick="currentSlide(4)"></span>
+</div> 
+{% endblock %}

@@ -1,0 +1,58 @@
+{%extends 'main_app/base.html'%}
+{%load static%}
+
+<style>
+.container{
+    background-image: url("{%block image%} {%static 'images/makka/kaaba2.jpeg'%} {%endblock%}");
+    background-size: cover;}
+    .title{
+        background-color: rgba(220, 220, 196, 0.484);
+    }
+</style>
+{% block content %}
+<div class="title">
+    <h1>Makkah</h1>
+    <P>Makkah is a city located in the western region of Saudi Arabia, and it is considered one of the holiest cities in Islam. It is the birthplace of the Prophet Muhammad and the site of the Kaaba, which is the most sacred site in Islam and the focal point of the annual Hajj pilgrimage.</P>
+</div>
+<div class="gallery">
+<div class="slideshow-container fade">
+
+  <!-- Full images with numbers and message Info -->
+  <div class="Containers">
+    <div class="MessageInfo">1 / 4</div>
+    <img src="{% static 'images/makka/haram1.jpg' %}" style="width:100%">
+    <div class="Info">KMasjid al-Haram, is one of the largest mosques in the world, and it can accommodate millions of worshippers at once.</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">2 / 4</div>
+    <img src="{% static 'images/makka/alsa3a.jpg' %}" style="width:100%">
+    <div class="Info">The Makkah Clock Royal Tower, also known as the Abraj Al Bait Towers, is a skyscraper complex located in the city of Makkah, Saudi Arabia.</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">3 / 4</div>
+    <img src="{%static 'images/makka/arafa.jpeg'%}" style="width:100%">
+    <div class="Info">Arafat is a plain located about 20 kilometers southeast of Makkah, Saudi Arabia. It is a significant site for Muslims, particularly during the annual Hajj pilgrimage. </div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">4 / 4</div>
+    <iframe width="960" height="515" src="https://www.youtube.com/embed/c25Ye58FVKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="Info">Makkah Video </div>
+  </div>
+
+  <!-- Back and forward buttons -->
+  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The circles/dots -->
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+  <span class="dots" onclick="currentSlide(4)"></span>
+</div> 
+{% endblock %}

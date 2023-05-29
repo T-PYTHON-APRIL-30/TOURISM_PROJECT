@@ -1,0 +1,68 @@
+{%extends 'main_app/base.html'%}
+{%load static%}
+{%block headstyle%}
+<style>
+.container{
+    background-image: url("{%block image%} {%static 'images/alola/bgalola.jpeg'%} {%endblock%}");
+    background-size: cover;}
+    .title{
+        color: beige;
+        background-color: rgba(71, 78, 60, 0.39);
+    }
+
+</style>
+{%endblock%} 
+{% block content %}
+<div class="title">
+    <h1>Al-Ola</h1>
+    <P>Al-Ola is a historic city located in the northwestern region of Saudi Arabia, about 300 kilometers north of the city of Medina. The city is known for its unique landscape of sandstone mountains and ancient ruins, which date back thousands of years.</P>
+</div>
+<div class="gallery">
+<div class="slideshow-container fade">
+
+  <!-- Full images with numbers and message Info -->
+  <div class="Containers">
+    <div class="MessageInfo">1 / 4</div>
+    <img src="{% static 'images/alola/athar.jpeg' %}" style="width:100%">
+    <div class="Info">The Mada'in Saleh, which is a UNESCO World Heritage Site that features well-preserved tombs and structures carved out of sandstone cliffs.</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">2 / 5</div>
+    <img src="{% static 'images/alola/alola1.jpg' %}" style="width:100%">
+    <div class="Info">A place of natural beauty, ancient ruins, and vibrant traditions, and it is quickly becoming one of the country's most popular tourist destinations.</div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">3 / 5</div>
+    <img src="{%static 'images/alola/alola2.jpg'%}" style="width:100%">
+    <div class="Info">Jabal Al-Fil (Arabic for "Elephant Mountain"). It is a natural rock formation that has been shaped by wind and erosion over thousands of years, and its distinctive shape resembles the profile of an elephant, with its trunk and ears clearly visible.  </div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">4 / 5</div>
+    <img src="{%static 'images/alola/alolaM.jpeg'%}" style="width:100%">
+    <div class="Info">Al-Ula Museum: The Al-Ula Museum is a cultural center that showcases the history and traditions of the region. </div>
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo">5 / 5</div>
+    <iframe width="960" height="515" src="https://www.youtube.com/embed/XrM5Y5ghEHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div >Video </div>
+  </div>
+
+  <!-- Back and forward buttons -->
+  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The circles/dots -->
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+  <span class="dots" onclick="currentSlide(4)"></span>
+  <span class="dots" onclick="currentSlide(5)"></span>
+</div> 
+{% endblock %}
