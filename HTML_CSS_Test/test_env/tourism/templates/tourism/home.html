@@ -203,17 +203,17 @@
             <div class="header">
                 <h1 class="logo">Travelism</h1>
                 <div class="menu_bar">
-                    <a href="{% url 'home_page' %}">Home</a>
-                    <a href="{% url 'about_sa' %}">Saudi Arabia</a>
-                    <a href="#destination">Destination</a>
-                    <a href="#about">About us</a>
+                    <a href="{% url 'tourism:home_page' %}">Home</a>
+                    <a href="{% url 'tourism:about_sa' %}">Saudi Arabia</a>
+                    <a href="tourism:#destination">Destination</a>
+                    <a href="tourism:#about">About us</a>
                 </div>
                 
             </div>
 
             <div class="content">
                 <h1>Discover and enjoy your new places and experiences in Saudi Arabia</h1>
-                <a href="{% url 'about_sa' %}" class="hero_btn">Know more</a>
+                <a href="{% url 'tourism:about_sa' %}" class="hero_btn">Know more</a>
 
             </div>
         </div>
@@ -225,21 +225,21 @@
                 <div class="info_col">
                     <img src="{%static 'images/Riyadh.png'%}">
                     <div class="layer">
-                        <a href="{% url 'riyadh_page' %}"><h3>Riyadh</h3></a>
+                        <a href="{% url 'tourism:riyadh_page' %}"><h3>Riyadh</h3></a>
                     </div>
                 </div>
 
                 <div class="info_col">
                     <img src="{%static 'images/Aula.png'%}">
                     <div class="layer">
-                        <a href="{% url 'alula_page' %}"><h3>Alula</h3></a>
+                        <a href="{% url 'tourism:alula_page' %}"><h3>Alula</h3></a>
                     </div>
                 </div>
 
                 <div class="info_col">
                     <img src="{%static 'images/Jeddah.png'%}" alt="Destination image">
                     <div class="layer">
-                        <a href="{% url 'jeddah_page' %}"><h3>Jeddah</h3></a>
+                        <a href="{% url 'tourism:jeddah_page' %}"><h3>Jeddah</h3></a>
                     </div>
                 </div>
 
@@ -247,7 +247,7 @@
                 <div class="info_col">
                     <img src="{%static 'images/Abha.png'%}" alt="Destination image">
                     <div class="layer">
-                        <a href="{% url 'abha_page' %}"><h3>Abha</h3></a>
+                        <a href="{% url 'tourism:abha_page' %}"><h3>Abha</h3></a>
                     </div>
                 </div>
 

@@ -1,254 +1,46 @@
-{%load static%}
-<!DOCTYPE html>
-<html>
+{% extends  'tourism/base.html' %}
+{% load static %}
 
-        <title>Travelism Explore</title>
-        <script src="https://kit.fontawesome.com/75ef6f1513.js" crossorigin="anonymous"></script>
-        <script src="{%static 'js/script.js'%}" defer></script>
-        <style>
-            * {
-                margin:0px;
-                padding:0px;
-                font-family: 'Ubuntu', sans-serif;
-                color: white;
-                text-decoration: none;
-                scroll-behavior: smooth;
-            }
+{% block content %}
+    <h1>Riyadh - Live the Modern Life to its Fullest</h1>
+    <p>In the ever-growing and flourishing city of Riyadh, you will discover the birthplace of the Kingdom of Saudi Arabia, along with its historical treasures hidden in the old palaces that witnessed the founding of the kingdom. It is a destination for tourists from all over the globe who wish to discover a world of shopping, entertainment and business. The malls offer the most exciting shopping experience, and the sand dunes combined with the brightest stars in the sky present the most magical experience in nature. It is an environment full of a natural variety and unique characteristics that are intriguing for explorers. On the other side of the bustling city, you can enjoy a variety of experiences in luxurious restaurants that offer their special services, and their elaborate international dishes. Simultaneously, the local Riyadh restaurants will tempt you with their authentic flavors and blend of spices originating from Saudi culture. Everyone is happy in the city of Riyadh where the biggest cultural events are always celebrated. Endless entertainment destinations are always emerging, for the city’s visitors to have intriguing and renewing experiences.</p>
+{% endblock %}
 
-            /* Header styles */
-            .header {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                background-image:linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url("{%static 'images/background.png'%}");
-                background-size: cover;
-                padding: 18px 35px;
-                height: 15vh;
-            }
-            .menu_bar {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                column-gap: 25px;   
-            }
-            .logo{
-                color: white ;
-            }
-            /* content styles */
-            .content{
-                display: flex;
-                flex-direction: column;
-                width: 80%;
-                padding:  0 35px;
-                margin-left: 89px;
-                margin-top: 50px;
-
-            }
-            .content h1{
-                color:chocolate;
-                margin-bottom: 25px;
-                margin-top: 20px;
-            }
-            .content p{
-                color: black;
-                font-size: 16px;
-                line-height: 150%;
-            }
-            .content div{
-                align-content: center;
-            }
-            /*carousel styles*/
-            .car-content{
-                display: flex;
-                padding: 0 35px;
-                align-items: center;
-                justify-content: center;
-                min-height: 60vh;
-            }
-            .wrapper{
-                max-width: 1200px;
-                position: relative;
-            }
-            .wrapper i{
-                top: 50%;
-                height: 46px;
-                width: 46px;
-                cursor: pointer;
-                position: absolute;
-                font-size: 1.2rem;
-                text-align: center;
-                line-height: 46px;
-                background-color: chocolate;
-                border-radius: 50%;
-                transform: translateY(-50%);
-            }
-            .wrapper i:first-child{
-                left: -23px;
-                display: none;
-            }
-            .wrapper i:last-child{
-                right: -23px;
-            }
-            .wrapper .carousel{
-                font-size: 0px;
-                cursor: pointer;
-                overflow: hidden;
-                white-space: nowrap;
-                scroll-behavior: smooth;
-            }
-            .carousel .dragging{
-                cursor: grab;
-                scroll-behavior: auto;
-            }
-            .carousel .dragging img{
-                pointer-events: none;
-            }
-            .carousel img{
-                height: 340px;
-                object-fit: cover;
-                margin-left: 14px;
-                width: calc(100% / 3);
-            }
-            .carousel img:first-child{
-                margin-left: 0px;
-            }
-
-            /* Avtivites style */
-            .city_container{
-                width: 80%;
-                margin: auto; 
-                padding:  0 35px;
-                margin-left: 89px;
-                padding-top: 50px;
-            }
-            .city_container h1{
-                color: chocolate;
-                font-size: 36px;
-                font-weight: 600;
-                margin-bottom: 25px;
-            }
-            .city_container p{
-                color: black;
-                font-size: 14px;
-                font-weight: 300;
-                line-height: 22px;
-                padding-top: 10px;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            .row{
-                margin: 5%;
-                display: flex;
-                justify-content: space-between;
-            }
-            .city_col{
-                flex-basis: 31%;
-                background: rgba(205,110,30,0.7);
-                border-radius: 10px;
-                margin-bottom: 5%;
-                position: relative;
-                overflow: hidden;
-                box-sizing: border-box;
-                transition: 0.5s;
-
-                
-            }
-            .city_col h3{
-                text-align: center;
-                font-weight: 600;
-                margin: 20px 0;
-            }
-
-            .city_col:hover{
-                box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-            }
-            .city_col p{
-                margin-bottom: 30px;
-                color:#fff
-            }
-            .city_col img{
-                width: 100%;
-                display: block;  
-            }
-
-        
-            /* Footer styles */
-            footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            }
-
-            footer p {
-            font-size: 14px;
-            }
-
-
-        </style>
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="header">
-                <h1 class="logo">Travelism</h1>
-                <div class="menu_bar">
-                    <a href="{% url 'home_page' %}">Home</a>
-                    <a href="{% url 'about_sa' %}">Saudi Arabia</a>
-                    <a href="#destination">Destination</a>
-                    <a href="#about">About us</a>
-                </div>
-                
-            </div>
+{%block car-content%}
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left" style="color:white;"></i>
+        <div class="carousel">
+            <img src="{%static 'images/Riyadh-slider.png'%}">
+            <img src="{%static 'images/Riyadh-slider2.png'%}">
+            <img src="{%static 'images/Riyadh-slider3.png'%}">
+            <img src="{%static 'images/Riyadh-slider4.png'%}">
+            <img src="{%static 'images/Riyadh-slider5.png'%}">
+            <img src="{%static 'images/Riyadh-slider6.png'%}">
         </div>
-        <div class="content">
-            <h1>Riyadh - Live the Modern Life to its Fullest</h1>
-            <p>In the ever-growing and flourishing city of Riyadh, you will discover the birthplace of the Kingdom of Saudi Arabia, along with its historical treasures hidden in the old palaces that witnessed the founding of the kingdom. It is a destination for tourists from all over the globe who wish to discover a world of shopping, entertainment and business. The malls offer the most exciting shopping experience, and the sand dunes combined with the brightest stars in the sky present the most magical experience in nature. It is an environment full of a natural variety and unique characteristics that are intriguing for explorers. On the other side of the bustling city, you can enjoy a variety of experiences in luxurious restaurants that offer their special services, and their elaborate international dishes. Simultaneously, the local Riyadh restaurants will tempt you with their authentic flavors and blend of spices originating from Saudi culture. Everyone is happy in the city of Riyadh where the biggest cultural events are always celebrated. Endless entertainment destinations are always emerging, for the city’s visitors to have intriguing and renewing experiences.</p>
-        </div>
-        <div class="car-content">
-            <div class="wrapper">
-                <i id="left" class="fa-solid fa-angle-left" style="color:white;"></i>
-                <div class="carousel">
-                    <img src="{%static 'images/Riyadh-slider.png'%}">
-                    <img src="{%static 'images/Riyadh-slider2.png'%}">
-                    <img src="{%static 'images/Riyadh-slider3.png'%}">
-                    <img src="{%static 'images/Riyadh-slider4.png'%}">
-                    <img src="{%static 'images/Riyadh-slider5.png'%}">
-                    <img src="{%static 'images/Riyadh-slider6.png'%}">
-                </div>
-                <i id="right" class="fa-solid fa-angle-right" style="color:white;"></i>
-            </div>
+        <i id="right" class="fa-solid fa-angle-right" style="color:white;"></i>
+    </div>
+{% endblock %}
+
+{%block city_container%}
+    <h1>Activities</h1>
+    <p>Visitors of Riyadh Season will enjoy a wonderful time in 15 different entertainment destinations all on the land of the capital, Riyadh. There is a variety of international events, musical concerts, fancy restaurants and many more.</p>
+    <div class="row">
+        <div class="city_col">
+            <img src="{%static 'images/Riyadh-act2.png'%}">
+            <h3>Hiking</h3>
+            <p>Hiking is one of the best way to enjoy the beautiful nature of the Saudi desert. but with us it's even more enjoyable with a nice company, you will have a long walk with a nice conversation with people from different countries sharing their experiences in life.</p>
         </div>
 
-        <div class="city_container">
-            <h1>Activities</h1>
-            <p>Visitors of Riyadh Season will enjoy a wonderful time in 15 different entertainment destinations all on the land of the capital, Riyadh. There is a variety of international events, musical concerts, fancy restaurants and many more.</p>
-            <div class="row">
-                <div class="city_col">
-                    <img src="{%static 'images/Riyadh-act2.png'%}">
-                    <h3>Hiking</h3>
-                    <p>Hiking is one of the best way to enjoy the beautiful nature of the Saudi desert. but with us it's even more enjoyable with a nice company, you will have a long walk with a nice conversation with people from different countries sharing their experiences in life.</p>
-                </div>
-
-                <div class="city_col">
-                    <img src="{%static 'images/Riyadh-act1.png'%}">
-                    <h3>Horse Riding</h3>
-                    <p>Horse riding is an exhilarating experience, So whether you are a beginner or can ride a horse like you are Clint Eastwood, here is your chance to get fit and have some fun.</p>
-                </div>
-
-                <div class="city_col">
-                    <img src="{%static 'images/Riyadh-act3.png'%}">
-                    <h3>Karting</h3>
-                    <p>Karting is the perfect place for you to show off your driving skills, compete with family and friends, and enjoy an unusual adrenaline-filled experience. In this 350m indoor track with multi-level spiral ramps, you will truly feel like you are on a real race car video game.</p>
-                </div>
-            </div>
+        <div class="city_col">
+            <img src="{%static 'images/Riyadh-act1.png'%}">
+            <h3>Horse Riding</h3>
+            <p>Horse riding is an exhilarating experience, So whether you are a beginner or can ride a horse like you are Clint Eastwood, here is your chance to get fit and have some fun.</p>
         </div>
 
-        <footer>
-            <p>&copy; 2023 Travelism Website</p>
-        </footer>
-    </body>
-
-   
-</html>
+        <div class="city_col">
+            <img src="{%static 'images/Riyadh-act3.png'%}">
+            <h3>Karting</h3>
+            <p>Karting is the perfect place for you to show off your driving skills, compete with family and friends, and enjoy an unusual adrenaline-filled experience. In this 350m indoor track with multi-level spiral ramps, you will truly feel like you are on a real race car video game.</p>
+        </div>
+    </div>
+{% endblock %}
