@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title> Home </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="static/styles.css"> 
+<!-- google fonts --> 
+<link href='https://fonts.googleapis.com/css?family=Unbounded' rel='stylesheet'>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+<header>
+  <img src="static/img/logo.png" alt="Logo" class="logo">
+  <nav class="menu">
+      <a href="{% url 'app:home' %}">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+  </nav> 
+</header>
+
+  <!-- contents -->
+  <!-- container -->
+<div class="container">
+  <h1>Tourism in Saudi Arabia</h1>
+  <img class="slide image" src="static/img/1.jpg">
+  <img class="slide image" src="static/img/2.jpg">
+  <img class="slide image" src="static/img/3.jpg">
+  <img class="slide image" src="static/img/4.jpg">
+  <img class="slide image" src="static/img/5.jpg">
+
+<h2>Discover the Hidsden Gems of Saudi Arabia</h2>
+<div class="style-the-btn"><a href="https://www.archdaily.com/995473/islamic-arts-biennale-oma" target=”_blank” class="btn">Islamic Arts</a></div>
+<div class="style-the-btn"><a href="https://www.designboom.com/art/desert-x-alula-2022-saudi-arabia-02-13-2022/" target=”_blank” class="btn">Desert X AlUla explores ideas of mirages and oasis</a></div>
+<div class="style-the-btn"><a href="https://www.archdaily.com/country/saudi-arabia" target=”_blank” class="btn">Architecture Design of Saudi Arabia</a></div>
+<div class="style-the-btn"><a href="https://www.archdaily.com/search/all?q=saudi%20arabia" target=”_blank” class="btn">Read More</a></div>
+</div>
+
+<script>
+  var index = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    index++;
+    if (index > x.length) { index = 1 }    
+    x[index-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  } 
+  </script> 
+
+  <!-- content 2 -->
+<div class="content2">
+  <h1 style="color: white">most visited place </h1>
+  <h2 style="color: white" id="color-change" >Your Turn to Discover More</h2>
+
+  <div class="row">
+    <div class="column">
+        <img src="static/img/6.jpg" alt="AlUla" style="width:100%">
+        <div class="container2">
+          <div class="container2-text-block"> 
+            <a href="{% url 'app:alula' %}"><h4>AlUla</h4></a>
+          </div>
+        </div>
+    </div>
+    <div class="column">
+      <img src="static/img/9.jpg" alt="Riyadh" style="width:100%">
+      <div class="container2">
+        <div class="container2-text-block"> 
+          <a href="{% url 'app:riyadh' %}"><h4>Riyadh</h4></a>
+        </div>
+      </div>
+  </div>
+  <div class="column">
+    <img src="static/img/8.jpg" alt="Mecca" style="width:100%">
+    <div class="container2">
+      <div class="container2-text-block"> 
+        <a href="{% url 'app:mecca' %}"><h4>Mecca</h4></a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <img src="static/img/7.jpg" alt="Dhahran" style="width:100%">
+    <div class="container2">
+      <div class="container2-text-block"> 
+        <a href="{% url 'app:dhahran' %}"><h4>Dhahran</h4></a>
+      </div>
+    </div>
+  </div>
+</div> <!-- row -->
+</div> <!-- content2 -->
+
+  <!-- content 0 -->
+<div class="content">
+  <h1>Content</h1>
+  <p>Some content blablabla, some content blablabla.</p>
+  <p>Some content blablabla, some content blablabla.</p>
+  <p>Some content blablabla, some content blablabla.</p>
+</div>
+
+    <!-- content 1 / footer -->
+<div class="content1">
+  <h1>Content</h1>
+  <p>Some content blablabla, some content blablabla.</p>
+  <p>Some content blablabla, some content blablabla.</p>
+  <p>Some content blablabla, some content blablabla.</p>
+</div>
+
+<section class="footer1">
+  <div class="social">
+    <a href="#" target=”_blank”><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/company/tdf-sa/" target=”_blank><i class="fab fa-linkedin"></i></a>
+    <a href="https://twitter.com/Saudi_MT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target=”_blank><i class="fab fa-twitter"></i></a>
+    <a href="https://www.facebook.com/Saudi.MT/?locale=ar_AR" target=”_blank”><i class="fab fa-facebook-f"></i></a>
+  </div>
+  <ul class="list">
+    <li>
+      <a href="{% url 'app:home' %}">Home</a>
+    </li>
+    <li>
+      <a href="#">Services</a>
+    </li>
+    <li>
+      <a href="#">About</a>
+    </li>
+    <li>
+      <a href="#">Terms</a>
+    </li>
+    <li>
+      <a href="#">Privacy Policy</a>
+    </li>
+  </ul>
+  <p class="copyright">Copyright © 2023</p>
+</section>
+
+  <!-- content 3 / cookies -->
+<div class="content3">
+  <p><strong>This website uses cookies</strong></p>
+  <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you've provided to them or that they've collected from your use of their services.</p>
+  <button id="content3btn" onclick="myFunction()">Accept</button>
+</div>
+
+</body>
+</html>
