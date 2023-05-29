@@ -1,235 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'app/base.html' %}
+{% load static %}
 
-<head>
-<title> Dhahran </title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="static/styles.css">
-<!-- google fonts --> 
-<link href='https://fonts.googleapis.com/css?family=Unbounded' rel='stylesheet'>
-<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-</head>
-</head>
+{% block title %} Dhahran {% endblock%}
 
-<style>
-    /* footer */
-  .footer1 {
-    padding: 40px 0;
-    background-color: #ffffff;
-    padding:140px;
-  }
+{% block content %} 
 
-  .footer1 .social {
-    text-align: center;
-    padding-bottom: 25px;
-    color: #4b4c4d;
-  }
-  .footer1 .social a {
-    font-size: 24px;
-    color: inherit;
-    border: 1px solid #ccc;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    opacity: 0.75;
-  }
-  .footer1 .social a:hover {
-    opacity: 0.9;
-  }
-  .footer1 ul {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-  }
-  .footer1 ul a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.8;
-  }
-  .footer1 ul li {
-    display: inline-block;
-    padding: 0 15px;
-  }
-  .footer1 ul a:hover {
-    opacity: 1;
-  }
-  .footer1 .copyright {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #aaa;
-  }
+<div>
+  <h2>Discover Dhahran</h2>
+  <img src="{% static 'img/Dhahran.jpeg' %}">
+</div>
+<p>
+  The Administrative Hub of Saudi Aramco
+  City of Dhahran emerged on the map after the discovery of oil in the region. For over 80 years it has continued to serve as the major administrative hub of the Saudi oil industry. The headquarters of Saudi Aramco are located in Dhahran and over 50,000 employees of the company reside in the city. Employees of Aramco (often called Aramcons), refer to Dhahran as the Aramco Camp. The nearby cities of Khobar and Dammam are known as the areas outside the camp. 
 
-  /* style the body */
-body {
-    font-family: Arial;
-    margin: 0;
-    box-sizing: border-box;
-}
+  The three cities of Dhahran, Khobar, and Dammam are also collectively known as the greater Dammam or the Dammam Metropolitan Area. Being situated next to the Arabian Gulf, the city offers some great views and beaches. You can also find a maritime museum, a water park, resorts, and parks in the city.  
+  
+  History
+  The discovery of the first commercial oil field of the Kingdom occurred in 1938 in Dhahran. After this the city rapidly developed and infrastructure like roads, railways, and a sea port were constructed. One of the three International airports of Saudi Arabia is located in Dhahran. The King Fahd International Airport is a wonder of modern engineering as well as traditional Islamic architecture. It is located between Dammam and AI Khobar, while a new International Airport is also set to open near Jubail.
 
-  /* header / logo */
-header {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding: 20px 50px;
-    font-family: 'Unbounded';
-}
+  Popular Attractions
+  The King Abdulaziz Center for World Culture (Ithra) is a world-famous tourist attraction. It is not just an icon but a whole new experience that fuses science, literature, and innovation in a perfect blend. The facilities at Ithra include an Idea Lab, Library, Ithra Theater, Cinema, Ithra Museum, Children’s Museum, Energy Exhibit, The Great Hall, and the Ithra Tower. You will need a whole day to explore all the wonders that this place has to offer.
+  Mall of Dhahran is one of the biggest malls of the Eastern Province. Department stores such as Next, Royal Doulton, BHS, Oasis and Sony, can be found inside this mall. You can buy virtually anything at this place. A few new shopping malls have also opened near the Gulf Meridien Hotel. For fast food you can visit the Fouad Center. It also offers mixed seating. Al Jumah City Centre mall is known for carpets, clothing, jewelry and souvenirs. King Khalid Street is famous for its gold shops and Prince Bader Street is a famous shopping point for ladies clothing.
 
-.logo {
-    margin-right: auto;
-    width: 100px;
-    height: 50px;
-}
- 
-.menu {
-    display: flex; 
-    justify-content: flex-end; 
-    margin-left: auto; 
-    align-items: center; 
-    gap: 20px;
-}
-         
-.menu a {
-    color: black; 
-    text-decoration: none;
-    font-size: 18px; 
-    text-align: center;
-    padding: 12px;
-    line-height: 25px;
-}
-         
-.menu a:hover {
-    background-color: #51856533;
-    color: black;
-    border-radius: 5%;
-}
+  King Fahd University of Petroleum and Minerals (KFUPM) is also situated in the city. It is a magnificent complex and offers world class education. The KFUPM clock tower is a well known landmark of the city. Saudi Aramco's Al-Midra Tower is another famous attraction of the city. The tallest building in Dhahran is the Al-Abdel Kareem Tower.
+</p>
 
-/* content 1 / footer */
-.content1 {
-    background: #165d31;
-    color: rgb(255, 255, 255);
-    padding:140px;
-}
-
- /* style the contents */ 
-h1 {
-    color:rgb(0, 0, 0);
-    padding:1.4rem 4.2rem;
-    font-size:1rem;
-    text-align:center; 
-    margin-top:50px;
-    text-transform:uppercase;
-    letter-spacing:0.8rem;
-}
-    
-h2 {
-    color:rgb(0, 0, 0);
-    padding:1.4rem 4.2rem;
-    font-size:1rem;
-    text-align:center; 
-    margin-top:10px;
-    letter-spacing:0.4rem;
-    text-transform:uppercase;
-    font-family: Arial;
-}
-
-h4 {
-    color:rgb(255, 255, 255);
-    padding:1.4rem 4.2rem;
-    font-size:1rem;
-    text-align:center; 
-    margin-top:10px;
-    text-transform:uppercase;
-    font-family: Arial;
-    letter-spacing:0.8rem;
-}
-
-a { 
-    text-decoration: none; 
-}
-</style>
-
-<body>
-    <header>
-      <img src="app/static/img/logo.png" alt="Logo" class="logo">
-      <nav class="menu">
-          <a href="{% url 'app:home' %}">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-      </nav> 
-    </header>
-
-    <div>
-        <h2>Discover Dhahran</h2>
-        <img src="static/img/Dhahran.jpeg">
-      </div>
-      <p>
-        The Administrative Hub of Saudi Aramco
-        City of Dhahran emerged on the map after the discovery of oil in the region. For over 80 years it has continued to serve as the major administrative hub of the Saudi oil industry. The headquarters of Saudi Aramco are located in Dhahran and over 50,000 employees of the company reside in the city. Employees of Aramco (often called Aramcons), refer to Dhahran as the Aramco Camp. The nearby cities of Khobar and Dammam are known as the areas outside the camp. 
-    
-        The three cities of Dhahran, Khobar, and Dammam are also collectively known as the greater Dammam or the Dammam Metropolitan Area. Being situated next to the Arabian Gulf, the city offers some great views and beaches. You can also find a maritime museum, a water park, resorts, and parks in the city.  
-        
-        History
-        The discovery of the first commercial oil field of the Kingdom occurred in 1938 in Dhahran. After this the city rapidly developed and infrastructure like roads, railways, and a sea port were constructed. One of the three International airports of Saudi Arabia is located in Dhahran. The King Fahd International Airport is a wonder of modern engineering as well as traditional Islamic architecture. It is located between Dammam and AI Khobar, while a new International Airport is also set to open near Jubail.
-    
-        Popular Attractions
-        The King Abdulaziz Center for World Culture (Ithra) is a world-famous tourist attraction. It is not just an icon but a whole new experience that fuses science, literature, and innovation in a perfect blend. The facilities at Ithra include an Idea Lab, Library, Ithra Theater, Cinema, Ithra Museum, Children’s Museum, Energy Exhibit, The Great Hall, and the Ithra Tower. You will need a whole day to explore all the wonders that this place has to offer.
-        Mall of Dhahran is one of the biggest malls of the Eastern Province. Department stores such as Next, Royal Doulton, BHS, Oasis and Sony, can be found inside this mall. You can buy virtually anything at this place. A few new shopping malls have also opened near the Gulf Meridien Hotel. For fast food you can visit the Fouad Center. It also offers mixed seating. Al Jumah City Centre mall is known for carpets, clothing, jewelry and souvenirs. King Khalid Street is famous for its gold shops and Prince Bader Street is a famous shopping point for ladies clothing.
-    
-        King Fahd University of Petroleum and Minerals (KFUPM) is also situated in the city. It is a magnificent complex and offers world class education. The KFUPM clock tower is a well known landmark of the city. Saudi Aramco's Al-Midra Tower is another famous attraction of the city. The tallest building in Dhahran is the Al-Abdel Kareem Tower.
-    </p>
-
-    <!-- content 1 -->
-<div class="content1">
-    <h1>Content</h1>
-    <p>Some content blablabla, some content blablabla.</p>
-    <p>Some content blablabla, some content blablabla.</p>
-    <p>Some content blablabla, some content blablabla.</p>
-  </div>
-
-    <!-- footer -->
-    <section class="footer1">
-        <div class="social">
-          <a href="#" target=”_blank”><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/tdf-sa/" target=”_blank><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/Saudi_MT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target=”_blank><i class="fab fa-twitter"></i></a>
-          <a href="https://www.facebook.com/Saudi.MT/?locale=ar_AR" target=”_blank”><i class="fab fa-facebook-f"></i></a>
-        </div>
-        <ul class="list">
-          <li>
-            <a href="{% url 'app:home' %}">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Terms</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-        </ul>
-        <p class="copyright">Copyright © 2023</p>
-      </section>
-      
-</body>
-</html>
+{% endblock %}
