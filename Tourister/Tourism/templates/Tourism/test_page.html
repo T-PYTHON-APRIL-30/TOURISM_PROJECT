@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Meddon&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {  
+            font-family: 'Meddon', cursive;
+            font-family: 'Alice', serif;   
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        div {
+            display: block;
+        }
+        body {
+            /* background-color: tan ;
+            height: 5000px; */
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        .componant {
+            background-color: tan ;
+            height: 5000px;
+            display: flex;
+            flex-direction: column;
+            grid-row: 3rem;
+            position: relative;
+            border: 4px solid rgb(5, 5, 5);
+
+        }
+        .video-youtupe {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: brightness(0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display:block ;
+        }
+        iframe {
+            position: absolute;
+            display: block;
+            /* top: 50%; */
+            /* left: 50%; */
+            width: 100vw;
+            height: 100vh;
+            /* transform: translate(-50%, -50%); */
+            pointer-events: none;
+            margin-bottom: 10px;
+        }
+        @media (min-aspect-ratio: 16/9) {
+            .video-container iframe {
+                /* height = 100 * (9 / 16) = 56.25 */
+                height: 56.25vw;
+            }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-container iframe {
+                /* width = 100 / (9 / 16) = 177.777777 */
+                width: 177.78vh;
+            }
+        }
+        .header {
+            border: 4px solid red;
+            display: block;
+            margin-bottom: 50rem;
+        }
+        .contant {
+            display: block;
+
+        }
+        .paper-contant{
+            border: 4px solid red;
+            display: flex;
+            flex-direction: column;
+            align-content: space-evenly ;
+            position: static;
+        }
+        .paper-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem 0px;
+            /* align-self: end; */
+        }
+        .paper-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem 0px;
+            align-self: end;
+        }
+        .text-left {
+            width: 50vw;
+            height: 60vh;
+            background-color: #282828;
+            border-start-end-radius: 25px ;
+            border-end-end-radius: 25px ;
+        }
+        .text-right {
+            width: 50vw;
+            height: 60vh;
+            /* background-image: url("/static/image/gome01.jpg"); */
+            background-color: #282828;
+            right: 0px;
+            border-start-start-radius: 25px ;
+            border-end-start-radius: 25px ;
+            align-self: end;
+
+        }
+        .image {
+            width: 50vw;
+            height: 60vh;
+            object-fit: cover;
+            border-start-start-radius: 25px ;
+            border-end-start-radius: 25px ;
+        }
+        .footer {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            
+        }
+        footer {
+            width: 100vw;
+            position: absolute;
+            background-color: #282828; 
+            left: 0;
+            bottom: 0;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="app">
+        <div class="componant">
+            <!-- Staert header -->
+            <div class="header">
+                <div class="video-youtupe">
+                    <iframe src="https://www.youtube.com/embed/WBotvcJgCD8?controls=0&autoplay=1&mute=1&loop=1&playsinline=1&playlist=WBotvcJgCD8" title="YouTube video player" frameborder="0" allow="autoplay; fullscreen " allowfullscreen></iframe>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark btn-lg bg-transparent">
+                    <div class="container">
+                        <a class="navbar-brand" href="#" style="font-family: 'Meddon', cursive; font-size: 30px; color: tan; text-shadow: 2px 2px black;">go travel</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" style="color: tan;" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: tan;" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: tan;" href="#">Pricing</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: tan;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    City List
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: tan;" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Alula</a></li>
+                                        <li><a class="dropdown-item" href="#">Dammam</a></li>
+                                        <li><a class="dropdown-item" href="#">Mekkah</a></li>
+                                        <li><a class="dropdown-item" href="#">Neom</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- end header -->
+
+            <!-- start contant -->
+            <div class="contant">
+                <div class="paper-contant">
+                    <div class="paper-left">
+                        <div class="text-left">
+
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                    <div class="paper-right">
+                        <div class="text-right">
+                            <img class="image" src="/static/image/home01.jpg" alt="">
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- end contant -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- footer -->
+            <div class="footer">
+                <footer class="bd-footer py-3 py-md-5 mt-5 ">
+                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                    </ul>
+                    <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+                </footer>
+            </div>
+            <!-- end footer -->
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
