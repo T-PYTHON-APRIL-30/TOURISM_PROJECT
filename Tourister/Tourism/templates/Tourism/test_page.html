@@ -6,6 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Meddon&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"> -->
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=202305240833">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +32,8 @@
             overflow-x: hidden;
         }
         .componant {
-            background-color: tan ;
-            height: 5000px;
+            background-color: #f5deb3 ;
+            /* height: 5000px; */
             display: flex;
             flex-direction: column;
             grid-row: 3rem;
@@ -50,13 +54,13 @@
         iframe {
             position: absolute;
             display: block;
-            /* top: 50%; */
-            /* left: 50%; */
+            top: 50%;
+            left: 50%;
             width: 100vw;
             height: 100vh;
-            /* transform: translate(-50%, -50%); */
+            transform: translate(-80%, -52%);
             pointer-events: none;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
         }
         @media (min-aspect-ratio: 16/9) {
             .video-container iframe {
@@ -73,25 +77,26 @@
         .header {
             border: 4px solid red;
             display: block;
-            margin-bottom: 50rem;
+            margin-bottom: 45rem;
         }
         .contant {
             display: block;
 
         }
         .paper-contant{
-            border: 4px solid red;
+            /* border: 4px solid red; */
             display: flex;
             flex-direction: column;
             align-content: space-evenly ;
             position: static;
+            row-gap: 5rem;
         }
         .paper-left {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin: 1rem 0px;
-            /* align-self: end; */
+            align-self: flex-start;
         }
         .paper-right {
             display: flex;
@@ -101,37 +106,105 @@
             align-self: end;
         }
         .text-left {
-            width: 50vw;
-            height: 60vh;
-            background-color: #282828;
+            width: 40vw;
+            height: 45vh;
+            z-index: 1;
+            background-color: #faf0e6;
             border-start-end-radius: 25px ;
             border-end-end-radius: 25px ;
+            align-self: center;
         }
         .text-right {
-            width: 50vw;
-            height: 60vh;
-            /* background-image: url("/static/image/gome01.jpg"); */
-            background-color: #282828;
-            right: 0px;
+            width: 40vw;
+            height: 45vh;
+            z-index: 1;
+            background-color: #faf0e6;
             border-start-start-radius: 25px ;
             border-end-start-radius: 25px ;
-            align-self: end;
+            align-self: center;
 
         }
-        .image {
+        .image-right {
             width: 50vw;
             height: 60vh;
+            z-index: 2;
             object-fit: cover;
             border-start-start-radius: 25px ;
             border-end-start-radius: 25px ;
         }
+        .image-left {
+            width: 50vw;
+            height: 60vh;
+            z-index: 2;
+            object-fit: cover;
+            border-start-end-radius: 25px ;
+            border-end-end-radius: 25px ;
+        }
+        .bd-best {
+            height: calc(386px + 3rem);
+            padding: 1.5rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .bd-best-list {
+            align-items: stretch;
+            animation-duration: 93.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            display: flex;
+            left: 0;
+            position: absolute;
+            top: 1.5rem;
+            animation-name: bdBestCarousel;
+        }
+        .bd-best-item {
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-right: 16px;
+            transition-duration: 172ms;
+            transition-property: box-shadow,transform;
+            width: 504px;
+        }
+        .bd-screenshot img {
+            display: inline-block;
+            height: auto;
+            vertical-align: top;
+            width: auto;
+        }
+        .bd-screenshot {
+            align-self: flex-start;
+            display: block;
+            transition-duration: 172ms;
+            transition-property: box-shadow,transform;
+        }
+
+
+        a {
+            color: #485fc7;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        figure {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 40px;
+            margin-inline-end: 40px;
+        }
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+
         .footer {
             display: block;
-            position: absolute;
+            padding-top: 40px;
             bottom: 0px;
             
         }
         footer {
+            height: 15rem;
             width: 100vw;
             position: absolute;
             background-color: #282828; 
@@ -139,6 +212,7 @@
             bottom: 0;
             color: white;
             text-align: center;
+            
         }
     </style>
 
@@ -147,7 +221,7 @@
     <div class="app">
         <div class="componant">
             <!-- Staert header -->
-            <div class="header">
+            <div class="container header">
                 <div class="video-youtupe">
                     <iframe src="https://www.youtube.com/embed/WBotvcJgCD8?controls=0&autoplay=1&mute=1&loop=1&playsinline=1&playlist=WBotvcJgCD8" title="YouTube video player" frameborder="0" allow="autoplay; fullscreen " allowfullscreen></iframe>
                 </div>
@@ -163,17 +237,17 @@
                                     <a class="nav-link active" style="color: tan;" aria-current="page" href="#">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: tan;" href="#">Features</a>
+                                    <a class="nav-link" style="color: tan;" href="#contant">Contant</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: tan;" href="#">Pricing</a>
+                                    <a class="nav-link" style="color: tan;" href="#Explore">Explore</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" style="color: tan;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     City List
                                     </a>
                                     <ul class="dropdown-menu" style="background-color: tan;" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Alula</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'Tourism:alula_page' %}">Alula</a></li>
                                         <li><a class="dropdown-item" href="#">Dammam</a></li>
                                         <li><a class="dropdown-item" href="#">Mekkah</a></li>
                                         <li><a class="dropdown-item" href="#">Neom</a></li>
@@ -187,24 +261,86 @@
             <!-- end header -->
 
             <!-- start contant -->
-            <div class="contant">
+            <div class="contant" id="contant">
                 <div class="paper-contant">
                     <div class="paper-left">
+                        <img class="image-left"src="/static/image/home01.jpg" alt="">
                         <div class="text-left">
-
+                            <div class="container p-6">
+                                <p style="font-size: 35px;">ALULA'S TOP 10 SUMMER LIST</p>
+                                <div class="container"><p>Boasting endless views of the tranquil Arabian Gulf, Dammam is a modern metropolis that thrives on its coastal location. Although it is known for its lush green parks, airy waterfronts and sandy beaches, it is highly enjoyable in the winter, too, with daytime temperatures averaging in the low 20s Celsius during the day and around 10 degrees at night. The region also has a growing reputation as an arts, sports and entertainment destination.</p></div>
+                            </div>
                         </div>
-                        <img src="" alt="">
                     </div>
                     <div class="paper-right">
                         <div class="text-right">
-                            <img class="image" src="/static/image/home01.jpg" alt="">
+                            <div class="container p-6">
+                                <p style="font-size: 35px;">hwosjdj</p>
+                            </div>
                         </div>
-                        <img src="" alt="">
+                        <img class="image-right" src="/static/image/home02.jpg" alt="">
+                    </div>
+                    <div class="paper-left">
+                        <img class="image-left"src="/static/image/home01.jpg" alt="">
+                        <div class="text-left">
+                            <div class="container p-6">
+                                <p style="font-size: 35px;">hwosjdj</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-right">
+                        <div class="text-right">
+                            <div class="container p-6">
+                                <p style="font-size: 35px;">hwosjdj</p>
+                            </div>
+                        </div>
+                        <img class="image-right" src="/static/image/home02.jpg" alt="">
                     </div>
                 </div>
             </div>
             <!-- end contant -->
+            <div class="bd-best" style="margin-bottom: 140px;">
+                <div class="bd-best-list">            
+                    
+                    <a id="Explore" class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_1 %}{% endblock %}"  width="672" height="420">
+                    </a>            
 
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_2 %}{% endblock %}"  width="672" height="420">
+                    </a>
+              
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_3 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_4 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_5 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_6 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_7 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_8 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_9 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    
+                </div>
+            </div>
 
 
 

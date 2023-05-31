@@ -1,0 +1,330 @@
+<!-- <% load static %> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Meddon&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"> -->
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=202305240833">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Go travel{% endblock %}</title>
+    <style>
+        * {  
+            font-family: 'Meddon', cursive;
+            font-family: 'Alice', serif;   
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        div {
+            display: block;
+        }
+        body {
+            /* background-color: tan ;
+            height: 5000px; */
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        .componant {
+            background-color: #f5deb3 ;
+            /* height: 5000px; */
+            display: flex;
+            flex-direction: column;
+            grid-row: 3rem;
+            position: relative;
+            border: 4px solid rgb(5, 5, 5);
+
+        }
+        .video-youtupe {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: brightness(0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display:block ;
+        }
+        iframe {
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
+            transform: translate(-80%, -52%);
+            pointer-events: none;
+            /* margin-bottom: 10px; */
+        }
+        @media (min-aspect-ratio: 16/9) {
+            .video-container iframe {
+                /* height = 100 * (9 / 16) = 56.25 */
+                height: 56.25vw;
+            }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-container iframe {
+                /* width = 100 / (9 / 16) = 177.777777 */
+                width: 177.78vh;
+            }
+        }
+        .header {
+            /* border: 4px solid red; */
+            display: block;
+            margin-bottom: 45rem;
+        }
+        .contant {
+            display: block;
+
+        }
+        .paper-contant{
+            /* border: 4px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-content: space-evenly ;
+            position: static;
+            row-gap: 5rem;
+        }
+        .paper-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem 0px;
+            align-self: flex-start;
+        }
+        .paper-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem 0px;
+            align-self: end;
+        }
+        .text-left {
+            width: 40vw;
+            height: 45vh;
+            z-index: 1;
+            background-color: #faf0e6;
+            border-start-end-radius: 25px ;
+            border-end-end-radius: 25px ;
+            align-self: center;
+        }
+        .text-right {
+            width: 40vw;
+            height: 45vh;
+            z-index: 1;
+            background-color: #faf0e6;
+            border-start-start-radius: 25px ;
+            border-end-start-radius: 25px ;
+            align-self: center;
+
+        }
+        .image-right {
+            width: 50vw;
+            height: 60vh;
+            z-index: 2;
+            object-fit: cover;
+            border-start-start-radius: 25px ;
+            border-end-start-radius: 25px ;
+        }
+        .image-left {
+            width: 50vw;
+            height: 60vh;
+            z-index: 2;
+            object-fit: cover;
+            border-start-end-radius: 25px ;
+            border-end-end-radius: 25px ;
+        }
+        .bd-best {
+            height: calc(386px + 3rem);
+            padding: 1.5rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .bd-best-list {
+            align-items: stretch;
+            animation-duration: 93.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            display: flex;
+            left: 0;
+            position: absolute;
+            top: 1.5rem;
+            animation-name: bdBestCarousel;
+        }
+        .bd-best-item {
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-right: 16px;
+            transition-duration: 172ms;
+            transition-property: box-shadow,transform;
+            width: 504px;
+        }
+        .bd-screenshot img {
+            display: inline-block;
+            height: auto;
+            vertical-align: top;
+            width: auto;
+        }
+        .bd-screenshot {
+            align-self: flex-start;
+            display: block;
+            transition-duration: 172ms;
+            transition-property: box-shadow,transform;
+        }
+
+
+        a {
+            color: black;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        figure {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 40px;
+            margin-inline-end: 40px;
+        }
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .footer {
+            display: block;
+            padding-top: 40px;
+            bottom: 0px;
+            
+        }
+        footer {
+            height: 15rem;
+            width: 100vw;
+            position: absolute;
+            background-color: #282828; 
+            left: 0;
+            bottom: 0;
+            color: white;
+            text-align: center;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="app">
+        <div class="componant">
+            <!-- Staert header -->
+            <div class="container header">
+                <div class="video-youtupe">
+                    <!-- https://www.youtube.com/embed/WBotvcJgCD8?controls=0&autoplay=1&mute=1&loop=1&playsinline=1&playlist=WBotvcJgCD8 -->
+                    {% block video %}
+                    <iframe src="https://www.youtube.com/embed/WBotvcJgCD8?controls=0&autoplay=1&mute=1&loop=1&playsinline=1&playlist=WBotvcJgCD8" title="YouTube video player" frameborder="0" allow="autoplay; fullscreen " allowfullscreen></iframe>
+                    {% endblock %}
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark btn-lg bg-transparent">
+                    <div class="container">
+                        <a class="navbar-brand" href="{% url 'Tourism:home_page' %}" style="font-family: 'Meddon', cursive; font-size: 30px; color: tan; text-shadow: 2px 2px black;">go travel</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" style="color: tan;" aria-current="page" href="{% url 'Tourism:home_page' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: tan;" href="#contant">Contant</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: tan;" href="#Explore">Explore</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: tan;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    City List
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: tan;" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="{% url 'Tourism:alula_page' %}">Alula</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'Tourism:mekkah_page' %}">Mekkah</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'Tourism:dammam_page' %}">Dammam</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'Tourism:neom_page' %}">Neom</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- end header -->
+
+            <!-- bar as animation -->
+            <div id="Explore" class="bd-best mb-6" >
+                <div class="bd-best-list">            
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_1 %}{% endblock %}"  width="672" height="420">
+                    </a>            
+
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_2 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_3 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_4 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_5 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_6 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_7 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_8 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    <a class="bd-screenshot bd-best-item bd-best-item bd-is-medium" href="">
+                        <img src="{% block img_bar_9 %}{% endblock %}"  width="672" height="420">
+                    </a>
+                    
+                    
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="footer mt-5" >
+                <footer class="bd-footer py-3 py-md-5 mt-5 " style="margin-top: 10rem;">
+                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="{% url 'Tourism:home_page' %}" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#Contant" class="nav-link px-2 text-muted">Contant</a></li>
+                    <li class="nav-item"><a href="#Explore" class="nav-link px-2 text-muted">Explore</a></li>
+                    </ul>
+                    <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+                </footer>
+            </div>
+            <!-- end footer -->
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
